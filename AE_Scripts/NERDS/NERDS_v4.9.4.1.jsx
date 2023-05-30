@@ -5,7 +5,6 @@ No Copyright, Nic Hartmann™ 2023
 Use Without Caution
 */
 
-
 vers = "4.9.4.1"; // change version number here and it gets updated in the panel's name
 (function createDockablePanel(thisObj) {
     function buildUI(thisObj) {
@@ -226,66 +225,66 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
         grpEaseDrop.margins = [4, 5, 4, 4];
         grpEaseDrop.alignment = ["fill", "top"];
 
-//#region Easement Easing
-        // UI - PANEL EASEMENT
-        // ==============
-        var panelEasement = grpEaseDrop.add("panel", undefined, {name: "panelEasement"});
-        panelEasement.text = "Easement"
-        panelEasement.orientation = "column";
-        panelEasement.alignChildren = ["center", "center"];
-        panelEasement.spacing = 5;
-        panelEasement.margins = 10;
+    //#region Easement Easing
+            // UI - PANEL EASEMENT
+            // ==============
+            var panelEasement = grpEaseDrop.add("panel", undefined, {name: "panelEasement"});
+            panelEasement.text = "Easement"
+            panelEasement.orientation = "column";
+            panelEasement.alignChildren = ["center", "center"];
+            panelEasement.spacing = 5;
+            panelEasement.margins = 10;
 
-        // Slider+Text Group
-        var SliderNText = panelEasement.add("group", undefined, "SliderNText");
-            SliderNText.orientation = "row";
-            SliderNText.alignChildren = ["center", "center"];
+            // Slider+Text Group
+            var SliderNText = panelEasement.add("group", undefined, "SliderNText");
+                SliderNText.orientation = "row";
+                SliderNText.alignChildren = ["center", "center"];
 
-        // Slider Group
-        var sliderGroup = panelEasement.add("group");
-            sliderGroup.orientation = "row";
+            // Slider Group
+            var sliderGroup = panelEasement.add("group");
+                sliderGroup.orientation = "row";
 
-        // Slider for Easing
-        var slider = sliderGroup.add("slider", [10, 10, 142, 30], 0, 0, 100);
-            slider.value = 50;
-            slider.stepdelta = 1; 
+            // Slider for Easing
+            var slider = sliderGroup.add("slider", [10, 10, 142, 30], 0, 0, 100);
+                slider.value = 50;
+                slider.stepdelta = 1; 
 
-        // EaseButts Group
-        var grpEaseButts = panelEasement.add("group", undefined, {name: "grpEaseButts"}); 
-            grpEaseButts.orientation = "row"; 
-            grpEaseButts.alignChildren = ["center","center"]; 
-            grpEaseButts.spacing = 10; 
-            grpEaseButts.margins = 0; 
-        var inButton = grpEaseButts.add("button", [10, 10, 35, 35], "◁");
-        var bothButton = grpEaseButts.add("button", [50, 10, 75, 35], "◁▷");
-        var outButton = grpEaseButts.add("button", [90, 10, 115, 35], "▷");
-        var valueText = grpEaseButts.add("edittext", undefined, slider.value.toFixed(0));
-            valueText.preferredSize.width = 35; 
-            valueText.preferredSize.height = 23; 
-            valueText.alignment = ["center","center"]; 
-            valueText.bounds = [90, 10, 150, 30];
-            slider.onChanging = function() {
-            valueText.text = this.value.toFixed(0);
-        };
+            // EaseButts Group
+            var grpEaseButts = panelEasement.add("group", undefined, {name: "grpEaseButts"}); 
+                grpEaseButts.orientation = "row"; 
+                grpEaseButts.alignChildren = ["center","center"]; 
+                grpEaseButts.spacing = 10; 
+                grpEaseButts.margins = 0; 
+            var inButton = grpEaseButts.add("button", [10, 10, 35, 35], "◁");
+            var bothButton = grpEaseButts.add("button", [50, 10, 75, 35], "◁▷");
+            var outButton = grpEaseButts.add("button", [90, 10, 115, 35], "▷");
+            var valueText = grpEaseButts.add("edittext", undefined, slider.value.toFixed(0));
+                valueText.preferredSize.width = 35; 
+                valueText.preferredSize.height = 23; 
+                valueText.alignment = ["center","center"]; 
+                valueText.bounds = [90, 10, 150, 30];
+                slider.onChanging = function() {
+                valueText.text = this.value.toFixed(0);
+            };
 
-        // 'applyEasing' event handlers
-        inButton.onClick = function() {
-            applyEasing(parseFloat(valueText.text), 'in');
-            app.activeViewer.setActive();
-        };
-        bothButton.onClick = function() {
-            applyEasing(parseFloat(valueText.text), 'both');
-            app.activeViewer.setActive();
-        };
-        outButton.onClick = function() {
-            applyEasing(parseFloat(valueText.text), 'out');
-            app.activeViewer.setActive();
-        };
-        valueText.addEventListener('focus', function() {
-            valueText.active = true;
-            valueText.selectAll();
-        });
-//#endregion Easement Easing
+            // 'applyEasing' event handlers
+            inButton.onClick = function() {
+                applyEasing(parseFloat(valueText.text), 'in');
+                app.activeViewer.setActive();
+            };
+            bothButton.onClick = function() {
+                applyEasing(parseFloat(valueText.text), 'both');
+                app.activeViewer.setActive();
+            };
+            outButton.onClick = function() {
+                applyEasing(parseFloat(valueText.text), 'out');
+                app.activeViewer.setActive();
+            };
+            valueText.addEventListener('focus', function() {
+                valueText.active = true;
+                valueText.selectAll();
+            });
+    //#endregion Easement Easing
   
         // GRP_DROPDOWN
         // ============

@@ -10,7 +10,6 @@ var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeBu
     winAIRHEAD.spacing = 10; 
     winAIRHEAD.margins = 16; 
 
-
     // PANEL1
     // ======
     var panel1 = winAIRHEAD.add("panel", undefined, undefined, {name: "panel1"}); 
