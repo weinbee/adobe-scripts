@@ -151,7 +151,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
         var iconButtReverse_imgString = strings.imgStrings.reverse; 
         var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {properties: {name: "iconButtReverse", style: "toolbutton", borderless: false}}); 
             iconButtReverse.helpTip = strings.helpTips.reverse;
-
+            // iconButtReverse's onclick is below it's function
 
         var iconButtLoop_imgString = strings.imgStrings.loop; 
         var iconButtLoop = col1Butts.add("iconbutton", undefined, File.decode(iconButtLoop_imgString), {properties: {name: "iconButtLoop", style: "toolbutton", borderless: false}}); 
