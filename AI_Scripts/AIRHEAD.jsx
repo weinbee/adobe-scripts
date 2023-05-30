@@ -1,8 +1,10 @@
 app.preferences.setBooleanPreference('ShowExternalJSXWarning', false); // Fix drag and drop a .jsx file
 
+vers = "1.0.1"; // change version number here and it gets updated in the panel's name
+
     // WINAIRHEAD
     // ==========
-    var winAIRHEAD = new Window("dialog", undefined, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
+    var winAIRHEAD = new Window('palette', 'NERDS_v' + vers + '', {maximizeButton: true, minimizeButton: true, resizeable: true}); 
         winAIRHEAD.text = "AIRHEAD"; 
         winAIRHEAD.orientation = "column"; 
         winAIRHEAD.alignChildren = ["center","top"]; 
