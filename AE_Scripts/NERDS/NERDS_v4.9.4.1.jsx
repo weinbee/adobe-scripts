@@ -140,7 +140,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
         col1Butts.margins = 0;
 
         var iconButtNull_imgString = strings.imgStrings.null0;
-        var iconButtNull = col1Butts.add("iconbutton", undefined, File.decode(iconButtNull_imgString), {name: "iconButtNull", style: "toolbutton"});
+        var iconButtNull = col1Butts.add("iconbutton", undefined, File.decode(iconButtNull_imgString), {properties: {name: "iconButtNull", style: "toolbutton", borderless: false}});
             iconButtNull.helpTip = strings.helpTips.null0;
             // iconButtNull = createANull
             iconButtNull.onClick = function() {
@@ -149,12 +149,12 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
         };
 
         var iconButtReverse_imgString = strings.imgStrings.reverse; 
-        var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {name: "iconButtReverse", style: "toolbutton"}); 
+        var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {properties: {name: "iconButtReverse", style: "toolbutton", borderless: false}}); 
             iconButtReverse.helpTip = strings.helpTips.reverse;
 
 
         var iconButtLoop_imgString = strings.imgStrings.loop; 
-        var iconButtLoop = col1Butts.add("iconbutton", undefined, File.decode(iconButtLoop_imgString), {name: "iconButtLoop", style: "toolbutton"}); 
+        var iconButtLoop = col1Butts.add("iconbutton", undefined, File.decode(iconButtLoop_imgString), {properties: {name: "iconButtLoop", style: "toolbutton", borderless: false}}); 
         iconButtLoop.helpTip = strings.helpTips.loop;
         iconButtLoop.onClick = function() {
             loopAtPlayhead();
@@ -163,7 +163,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
 
 
         var iconButtColor_imgString = strings.imgStrings.color;
-                var iconButtColor = col1Butts.add("iconbutton", undefined, File.decode(iconButtColor_imgString), {name: "iconButtColor", style: "toolbutton"}); 
+                var iconButtColor = col1Butts.add("iconbutton", undefined, File.decode(iconButtColor_imgString), {properties: {name: "iconButtColor", style: "toolbutton", borderless: false}}); 
                     iconButtColor.helpTip = strings.helpTips.color;
                     iconButtColor.onClick = function() {
                     colorPicker();
@@ -181,7 +181,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
                 col2Butts.margins = 0;
 
         var iconButtRename_imgString = strings.imgStrings.rename; 
-                var iconButtRename = col2Butts.add("iconbutton", undefined, File.decode(iconButtRename_imgString), {name: "iconButtRename", style: "toolbutton"}); 
+                var iconButtRename = col2Butts.add("iconbutton", undefined, File.decode(iconButtRename_imgString), {properties: {name: "iconButtRename", style: "toolbutton", borderless: false}}); 
                     iconButtRename.helpTip = strings.helpTips.rename;
                     iconButtRename.onClick = function() {
                     var win = new Window('palette', 'Layer Rename', [300, 100, 645, 396]);
@@ -192,7 +192,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
                     app.activeViewer.setActive();
                 }
         var iconButtSmartXY_imgString = strings.imgStrings.smartxy; 
-        var iconButtSmartXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartXY_imgString), {name: "iconButtSmartXY", style: "toolbutton"}); 
+        var iconButtSmartXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartXY_imgString), {properties: {name: "iconButtSmartXY", style: "toolbutton", borderless: false}}); 
             iconButtSmartXY.helpTip = strings.helpTips.smartxy;
             iconButtSmartXY.onClick = function() {
             separateDimensionsPreserveEasing();
@@ -200,7 +200,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
         }
 
         var iconButtSort_imgString = strings.imgStrings.sort; 
-        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"}); 
+        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {properties: {name: "iconButtSort", style: "toolbutton", borderless: false}}); 
             iconButtSort.helpTip = strings.helpTips.sort;
             iconButtSort.onClick = function() {
             sortProjectItems();
@@ -208,7 +208,7 @@ vers = "4.9.4.1"; // change version number here and it gets updated in the panel
         }
 
         var iconButtExplode_imgString = strings.imgStrings.explode; 
-        var iconButtExplode = col2Butts.add("iconbutton", undefined, File.decode(iconButtExplode_imgString), {name: "iconButtExplode", style: "toolbutton"}); 
+        var iconButtExplode = col2Butts.add("iconbutton", undefined, File.decode(iconButtExplode_imgString), {properties: {name: "iconButtExplode", style: "toolbutton", borderless: false}}); 
             iconButtExplode.helpTip = strings.helpTips.explode;
             iconButtExplode.onClick = function() {
             explodeShapeLayers();
