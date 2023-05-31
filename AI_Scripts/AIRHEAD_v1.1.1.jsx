@@ -80,26 +80,26 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
 //#region event listeners
     buttUngrouper.onClick = function() {
         ungrouper();
-        app.redraw();
+        
     };
     buttFata.onClick = function() {
         openFata();
     };
     buttRenamer.onClick = function() {
         openRenamer();
-        app.redraw();
+        
     };
     buttUnlockAll.onClick = function() {
         unlocker();
-        app.redraw();
+        
     };
     buttSolo.onClick = function() {
         soloLayers();
-        app.redraw();
+        
     };
     buttUnsolo.onClick = function() {
         unsoloLayers();
-        app.redraw();
+        
     };
 //#endregion event listeners
 
@@ -329,7 +329,7 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
         try {
             main();
         } catch (e) {}
-        app.redraw();
+        
     };
 //#endregion FitArtboardsToArtwork
 
@@ -517,7 +517,7 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
                 alert(err + ': on line ' + err.line, 'Script Error', true);
             }
         }
-        app.redraw();
+        
     };
 //#endregion Ungrouper
 
@@ -548,7 +548,7 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
             }
         }
         unlockAllLayers(app.activeDocument);
-        app.redraw();
+        
     }
 
 //#endregion Unlock All
@@ -595,7 +595,7 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
                 }
             }
         }
-        app.redraw();
+        
     }
 //#endregion Renamer
 
@@ -628,7 +628,7 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
 
         // Clear the array after making all layers visible
         invisibleLayers = [];
-        app.redraw();
+        
     }
 //#endregion solo/unsolo
 
