@@ -4,277 +4,333 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
 
 // WINAIRHEAD
 // ==========
-var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
-    winAIRHEAD.orientation = "column"; 
-    winAIRHEAD.alignChildren = ["center","top"]; 
-    winAIRHEAD.spacing = 10; 
-    winAIRHEAD.margins = 16; 
+    var winAIRHEAD = new Window("palette", undefined, undefined, {
+        resizeable: true
+    });
+    winAIRHEAD.text = "AIRHEAD";
+    winAIRHEAD.orientation = "column";
+    winAIRHEAD.alignChildren = ["center", "center"];
+    winAIRHEAD.spacing = 10;
+    winAIRHEAD.margins = 16;
 
+//#region UI
     // PANEL1
     // ======
-    var panel1 = winAIRHEAD.add("panel", undefined, undefined, {name: "panel1"}); 
-        panel1.text = "Butt(on)s"; 
-        panel1.orientation = "column"; 
-        panel1.alignChildren = ["left","top"]; 
-        panel1.spacing = 8; 
-        panel1.margins = 11;   
+    var panel1 = winAIRHEAD.add("panel", undefined, undefined, {
+        name: "panel1"
+    });
+    panel1.text = "Butts";
+    panel1.orientation = "column";
+    panel1.alignChildren = ["center", "center"];
+    panel1.spacing = 8;
+    panel1.margins = 11;
 
-    var buttUngrouper = panel1.add("button", undefined, undefined, {name: "buttUngrouper"}); 
-        buttUngrouper.text = "Ungrouper";
-        buttUngrouper.onClick = function() {
+    var buttUngrouper = panel1.add("button", undefined, undefined, {
+        name: "buttUngrouper"
+    });
+    buttUngrouper.text = "Ungroup All";
+    buttUngrouper.preferredSize.width = 131;
+
+    var buttFata = panel1.add("button", undefined, undefined, {
+        name: "buttFata"
+    });
+    buttFata.text = "FATA";
+    buttFata.preferredSize.width = 131;
+
+    var buttRenamer = panel1.add("button", undefined, undefined, {
+        name: "buttRenamer"
+    });
+    buttRenamer.text = "Renamer";
+    buttRenamer.preferredSize.width = 131;
+
+    var buttUnlockAll = panel1.add("button", undefined, undefined, {
+        name: "buttUnlockAll"
+    });
+    buttUnlockAll.text = "Unlock All";
+    buttUnlockAll.preferredSize.width = 131;
+
+    var divider1 = panel1.add("panel", undefined, undefined, {
+        name: "divider1"
+    });
+    divider1.alignment = "fill";
+
+    // GRPSOLOUNSOLO
+    // =============
+    var grpSoloUnsolo = panel1.add("group", undefined, {
+        name: "grpSoloUnsolo"
+    });
+    grpSoloUnsolo.orientation = "row";
+    grpSoloUnsolo.alignChildren = ["center", "center"];
+    grpSoloUnsolo.spacing = 10;
+    grpSoloUnsolo.margins = 0;
+
+    var buttSolo = grpSoloUnsolo.add("button", undefined, undefined, {
+        name: "buttSolo"
+    });
+    buttSolo.text = "Solo";
+    buttSolo.preferredSize.width = 65;
+
+    var buttUnsolo = grpSoloUnsolo.add("button", undefined, undefined, {
+        name: "buttUnsolo"
+    });
+    buttUnsolo.text = "Unsolo";
+    buttUnsolo.preferredSize.width = 65;
+//#endregion UI
+
+//#region event listeners
+    buttUngrouper.onClick = function() {
         ungrouper();
         app.redraw();
     };
-
-    var buttFata = panel1.add("button", undefined, undefined, {name: "buttFata"}); 
-        buttFata.text = "Fit Artboards to Artwork"; 
-        buttFata.onClick = function() {
+    buttFata.onClick = function() {
         openFata();
     };
-
-    var buttRenamer = panel1.add("button", undefined, undefined, {name: "buttRenamer"}); 
-        buttRenamer.text = "Renamer"; 
-        buttRenamer.onClick = function() {
+    buttRenamer.onClick = function() {
         openRenamer();
         app.redraw();
     };
-
-    var buttUnlockAll = panel1.add("button", undefined, undefined, {name: "buttUnlockAll"}); 
-        buttUnlockAll.text = "Unlock All Layers"; 
-        buttUnlockAll.onClick = function() {
+    buttUnlockAll.onClick = function() {
         unlocker();
         app.redraw();
     };
-
-    var buttSolo = panel1.add("button", undefined, undefined, {name: "buttSolo"}); 
-        buttSolo.text = "Solo"; 
-        buttSolo.onClick = function() {
+    buttSolo.onClick = function() {
         soloLayers();
         app.redraw();
     };
-
-    var buttUnsolo = panel1.add("button", undefined, undefined, {name: "buttUnsolo"}); 
-        buttUnsolo.text = "Unsolo"; 
-        buttUnsolo.onClick = function() {
+    buttUnsolo.onClick = function() {
         unsoloLayers();
         app.redraw();
     };
-
 //#endregion event listeners
 
 //#region FitArtboardsToArtwork
     var openFata = function() {
         function main() {
-        var SCRIPT = {
-            name: 'Fit Artboards To Artwork',
-            version: 'v.1.0'
-            },
-            CFG = {
-            units: getUnits(), // Active document units
-            paddings: 10,
-            isEqual: true,
-            dlgOpacity: .97 // UI window opacity. Range 0-1
-            };
+            var SCRIPT = {
+                    name: 'Fit Artboards To Artwork',
+                    version: 'v.1.0'
+                },
+                CFG = {
+                    units: getUnits(), // Active document units
+                    paddings: 10,
+                    isEqual: true,
+                    dlgOpacity: .97 // UI window opacity. Range 0-1
+                };
 
-        if (!documents.length) {
-            alert('Error\nOpen a document and try again');
-            return;
-        }
+            if (!documents.length) {
+                alert('Error\nOpen a document and try again');
+                return;
+            }
 
-        // Scale factor for Large Canvas mode
-        CFG.sf = activeDocument.scaleFactor ? activeDocument.scaleFactor : 1;
+            // Scale factor for Large Canvas mode
+            CFG.sf = activeDocument.scaleFactor ? activeDocument.scaleFactor : 1;
 
-        // Dialog
-        var dialog = new Window('dialog', SCRIPT.name + ' ' + SCRIPT.version);
+            // Dialog
+            var dialog = new Window('dialog', SCRIPT.name + ' ' + SCRIPT.version);
             dialog.alignChildren = ['fill', 'fill'];
             dialog.opacity = CFG.dlgOpacity;
 
-        // Paddings
-        var padPnl = dialog.add('panel', undefined, 'Paddings, ' + CFG.units);
+            // Paddings
+            var padPnl = dialog.add('panel', undefined, 'Paddings, ' + CFG.units);
             padPnl.alignChildren = ['left', 'bottom'];
             padPnl.margins = 10;
 
-        // Wrapper
-        var wrapper = padPnl.add('group');
+            // Wrapper
+            var wrapper = padPnl.add('group');
             wrapper.alignChildren = ['left', 'bottom'];
             wrapper.spacing = 10;
 
-        // Top
-        var top = wrapper.add('group');
+            // Top
+            var top = wrapper.add('group');
             top.preferredSize.width = 50;
             top.orientation = 'column';
             top.alignChildren = ['fill', 'center'];
             top.spacing = 5;
 
-        top.add('statictext', undefined, 'Top');
-        var topInp = top.add('edittext', undefined, CFG.paddings);
+            top.add('statictext', undefined, 'Top');
+            var topInp = top.add('edittext', undefined, CFG.paddings);
 
-        // Bottom
-        var bottom = wrapper.add('group');
+            // Bottom
+            var bottom = wrapper.add('group');
             bottom.preferredSize.width = 50;
             bottom.orientation = 'column';
             bottom.alignChildren = ['fill', 'center'];
             bottom.spacing = 5;
 
-        bottom.add('statictext', undefined, 'Bottom');
-        var bottomInp = bottom.add('edittext', undefined, CFG.paddings);
+            bottom.add('statictext', undefined, 'Bottom');
+            var bottomInp = bottom.add('edittext', undefined, CFG.paddings);
 
-        // Left
-        var left = wrapper.add('group');
+            // Left
+            var left = wrapper.add('group');
             left.preferredSize.width = 50;
             left.orientation = 'column';
             left.alignChildren = ['fill', 'center'];
             left.spacing = 5;
 
-        left.add('statictext', undefined, 'Left');
-        var leftInp = left.add('edittext', undefined, CFG.paddings);
+            left.add('statictext', undefined, 'Left');
+            var leftInp = left.add('edittext', undefined, CFG.paddings);
 
-        // Right
-        var right = wrapper.add('group');
+            // Right
+            var right = wrapper.add('group');
             right.preferredSize.width = 50;
             right.orientation = 'column';
             right.alignChildren = ['fill', 'center'];
             right.spacing = 5;
 
-        right.add('statictext', undefined, 'Right');
-        var rightInp = right.add('edittext', undefined, CFG.paddings);
+            right.add('statictext', undefined, 'Right');
+            var rightInp = right.add('edittext', undefined, CFG.paddings);
 
-        var isEqual = wrapper.add('checkbox');
+            var isEqual = wrapper.add('checkbox');
             isEqual.value = CFG.isEqual;
 
-        bottomInp.enabled = !isEqual.value;
-        leftInp.enabled = !isEqual.value;
-        rightInp.enabled = !isEqual.value;
+            bottomInp.enabled = !isEqual.value;
+            leftInp.enabled = !isEqual.value;
+            rightInp.enabled = !isEqual.value;
 
-        // Artboards
-        var absPnl = dialog.add('panel', undefined, 'Source');
+            // Artboards
+            var absPnl = dialog.add('panel', undefined, 'Source');
             absPnl.orientation = 'row';
             absPnl.alignChildren = ['fill', 'top'];
             absPnl.margins = [10, 15, 10, 10];
 
-        var activeRb = absPnl.add('radiobutton', undefined, 'Active artboard');
+            var activeRb = absPnl.add('radiobutton', undefined, 'Active artboard');
             activeRb.value = true;
-        var allRb = absPnl.add('radiobutton', undefined, 'All artboards');
+            var allRb = absPnl.add('radiobutton', undefined, 'All artboards');
 
-        var btns = dialog.add('group');
+            var btns = dialog.add('group');
             btns.alignChildren = ['center', 'top'];
-        var cancel = btns.add('button', undefined, 'Cancel', {name: 'cancel'});
-        var ok = btns.add('button', undefined, 'Ok', {name: 'ok'});
+            var cancel = btns.add('button', undefined, 'Cancel', {
+                name: 'cancel'
+            });
+            var ok = btns.add('button', undefined, 'Ok', {
+                name: 'ok'
+            });
 
-        var copyright = dialog.add('statictext', undefined, '\u00A9 Nic.');
+            var copyright = dialog.add('statictext', undefined, '\u00A9 Nic.');
             copyright.justify = 'center';
 
-        copyright.addEventListener('mousedown', function () {
-            openURL('https://github.com/sakhaltai/');
-        });
+            copyright.addEventListener('mousedown', function() {
+                openURL('https://github.com/sakhaltai/');
+            });
 
-        isEqual.onClick = function () {
-            bottomInp.enabled = !this.value;
-            leftInp.enabled = !this.value;
-            rightInp.enabled = !this.value;
-        }
-
-        cancel.onClick = dialog.close;
-        ok.onClick = okClick;
-
-        function okClick() {
-            var doc = app.activeDocument,
-                paddings = {};
-
-            paddings.top = convertUnits( strToAbsNum(topInp.text, CFG.paddings), CFG.units, 'px' ) / CFG.sf;
-            paddings.bottom = isEqual.value ? paddings.top : convertUnits( strToAbsNum(bottomInp.text, CFG.paddings), CFG.units, 'px' ) / CFG.sf;
-            paddings.left = isEqual.value ? paddings.top : convertUnits( strToAbsNum(leftInp.text, CFG.paddings), CFG.units, 'px' ) / CFG.sf;
-            paddings.right = isEqual.value ? paddings.top : convertUnits( strToAbsNum(rightInp.text, CFG.paddings), CFG.units, 'px' ) / CFG.sf;
-
-            selection = null;
-            redraw();
-
-            if (allRb.value) {
-            for (var i = 0, len = doc.artboards.length; i < len; i++) {
-                doc.artboards.setActiveArtboardIndex(i);
-                resizeArtboard(doc.artboards[i], i, paddings);
-            }
-            } else {
-            var idx = doc.artboards.getActiveArtboardIndex();
-            resizeArtboard(doc.artboards[idx], idx, paddings);
+            isEqual.onClick = function() {
+                bottomInp.enabled = !this.value;
+                leftInp.enabled = !this.value;
+                rightInp.enabled = !this.value;
             }
 
-            dialog.close();
-        }
+            cancel.onClick = dialog.close;
+            ok.onClick = okClick;
 
-        dialog.center();
-        dialog.show();
+            function okClick() {
+                var doc = app.activeDocument,
+                    paddings = {};
+
+                paddings.top = convertUnits(strToAbsNum(topInp.text, CFG.paddings), CFG.units, 'px') / CFG.sf;
+                paddings.bottom = isEqual.value ? paddings.top : convertUnits(strToAbsNum(bottomInp.text, CFG.paddings), CFG.units, 'px') / CFG.sf;
+                paddings.left = isEqual.value ? paddings.top : convertUnits(strToAbsNum(leftInp.text, CFG.paddings), CFG.units, 'px') / CFG.sf;
+                paddings.right = isEqual.value ? paddings.top : convertUnits(strToAbsNum(rightInp.text, CFG.paddings), CFG.units, 'px') / CFG.sf;
+
+                selection = null;
+                redraw();
+
+                if (allRb.value) {
+                    for (var i = 0, len = doc.artboards.length; i < len; i++) {
+                        doc.artboards.setActiveArtboardIndex(i);
+                        resizeArtboard(doc.artboards[i], i, paddings);
+                    }
+                } else {
+                    var idx = doc.artboards.getActiveArtboardIndex();
+                    resizeArtboard(doc.artboards[idx], idx, paddings);
+                }
+
+                dialog.close();
+            }
+
+            dialog.center();
+            dialog.show();
         }
 
         // Add paddings to artboard
         function resizeArtboard(ab, idx, paddings) {
-        activeDocument.selectObjectsOnActiveArtboard();
-        if (!selection.length) return;
+            activeDocument.selectObjectsOnActiveArtboard();
+            if (!selection.length) return;
 
-        activeDocument.fitArtboardToSelectedArt(idx);
-        selection = null;
+            activeDocument.fitArtboardToSelectedArt(idx);
+            selection = null;
 
-        var rect = ab.artboardRect,
-            left = rect[0],
-            top = rect[1],
-            right = rect[2],
-            bottom = rect[3];
+            var rect = ab.artboardRect,
+                left = rect[0],
+                top = rect[1],
+                right = rect[2],
+                bottom = rect[3];
 
-        ab.artboardRect = [left - paddings.left, top + paddings.top, right + paddings.right, bottom - paddings.bottom];
+            ab.artboardRect = [left - paddings.left, top + paddings.top, right + paddings.right, bottom - paddings.bottom];
         }
 
         // Get active document ruler units
         function getUnits() {
-        if (!documents.length) return '';
-        var key = activeDocument.rulerUnits.toString().replace('RulerUnits.', '');
-        switch (key) {
-            case 'Pixels': return 'px';
-            case 'Points': return 'pt';
-            case 'Picas': return 'pc';
-            case 'Inches': return 'in';
-            case 'Millimeters': return 'mm';
-            case 'Centimeters': return 'cm';
-            // Added in CC 2023 v27.1.1
-            case 'Meters': return 'm';
-            case 'Feet': return 'ft';
-            case 'FeetInches': return 'ft';
-            case 'Yards': return 'yd';
-            // Parse new units in CC 2020-2023 if a document is saved
-            case 'Unknown':
-            var xmp = activeDocument.XMPString;
-            if (/stDim:unit/i.test(xmp)) {
-                var units = /<stDim:unit>(.*?)<\/stDim:unit>/g.exec(xmp)[1];
-                if (units == 'Meters') return 'm';
-                if (units == 'Feet') return 'ft';
-                if (units == 'FeetInches') return 'ft';
-                if (units == 'Yards') return 'yd';
-                return 'px';
+            if (!documents.length) return '';
+            var key = activeDocument.rulerUnits.toString().replace('RulerUnits.', '');
+            switch (key) {
+                case 'Pixels':
+                    return 'px';
+                case 'Points':
+                    return 'pt';
+                case 'Picas':
+                    return 'pc';
+                case 'Inches':
+                    return 'in';
+                case 'Millimeters':
+                    return 'mm';
+                case 'Centimeters':
+                    return 'cm';
+                    // Added in CC 2023 v27.1.1
+                case 'Meters':
+                    return 'm';
+                case 'Feet':
+                    return 'ft';
+                case 'FeetInches':
+                    return 'ft';
+                case 'Yards':
+                    return 'yd';
+                    // Parse new units in CC 2020-2023 if a document is saved
+                case 'Unknown':
+                    var xmp = activeDocument.XMPString;
+                    if (/stDim:unit/i.test(xmp)) {
+                        var units = /<stDim:unit>(.*?)<\/stDim:unit>/g.exec(xmp)[1];
+                        if (units == 'Meters') return 'm';
+                        if (units == 'Feet') return 'ft';
+                        if (units == 'FeetInches') return 'ft';
+                        if (units == 'Yards') return 'yd';
+                        return 'px';
+                    }
+                    break;
+                default:
+                    return 'px';
             }
-            break;
-            default: return 'px';
-        }
         }
 
         // Convert units of measurement
         function convertUnits(value, currUnits, newUnits) {
-        return UnitValue(value, currUnits).as(newUnits);
+            return UnitValue(value, currUnits).as(newUnits);
         }
 
         // Convert string to absolute number
         function strToAbsNum(str, def) {
-        if (arguments.length == 1 || def == undefined) def = 1;
-        str = str.replace(/,/g, '.').replace(/[^\d.]/g, '');
-        str = str.split('.');
-        str = str[0] ? str[0] + '.' + str.slice(1).join('') : '';
-        if (isNaN(str) || !str.length) return parseFloat(def);
-        else return parseFloat(str);
+            if (arguments.length == 1 || def == undefined) def = 1;
+            str = str.replace(/,/g, '.').replace(/[^\d.]/g, '');
+            str = str.split('.');
+            str = str[0] ? str[0] + '.' + str.slice(1).join('') : '';
+            if (isNaN(str) || !str.length) return parseFloat(def);
+            else return parseFloat(str);
         }
 
         try {
-        main();
+            main();
         } catch (e) {}
         app.redraw();
-        };
+    };
 //#endregion FitArtboardsToArtwork
 
 //#region Ungrouper
@@ -466,7 +522,7 @@ var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeBu
 //#endregion Ungrouper
 
 //#region Unlock All
-    function unlocker () {
+    function unlocker() {
         function unlockAllLayers(doc) {
             for (var i = 0; i < doc.layers.length; i++) {
                 var layer = doc.layers[i];
@@ -494,52 +550,52 @@ var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeBu
         unlockAllLayers(app.activeDocument);
         app.redraw();
     }
-    
+
 //#endregion Unlock All
 
 //#region Renamer
     var openRenamer = function() {
-    // Batch rename dialog
-    var dialog = new Window('dialog', 'Batch Rename Layers');
+        // Batch rename dialog
+        var dialog = new Window('dialog', 'Batch Rename Layers');
 
-    // Search input
-    dialog.add('statictext', undefined, 'Search for:');
-    var searchInput = dialog.add('edittext', undefined, 'Layer ');
-    searchInput.characters = 30;
+        // Search input
+        dialog.add('statictext', undefined, 'Search for:');
+        var searchInput = dialog.add('edittext', undefined, 'Layer ');
+        searchInput.characters = 30;
 
-    // Replace input
-    dialog.add('statictext', undefined, 'Replace with:');
-    var replaceInput = dialog.add('edittext', undefined, 'cloud');
-    replaceInput.characters = 30;
+        // Replace input
+        dialog.add('statictext', undefined, 'Replace with:');
+        var replaceInput = dialog.add('edittext', undefined, 'cloud');
+        replaceInput.characters = 30;
 
-    // Buttons
-    var buttonGroup = dialog.add('group');
-    var okButton = buttonGroup.add('button', undefined, 'OK');
-    var cancelButton = buttonGroup.add('button', undefined, 'Cancel');
+        // Buttons
+        var buttonGroup = dialog.add('group');
+        var okButton = buttonGroup.add('button', undefined, 'OK');
+        var cancelButton = buttonGroup.add('button', undefined, 'Cancel');
 
-    okButton.onClick = function() {
-        renameLayers(app.activeDocument, searchInput.text, replaceInput.text);
-        dialog.close();
-    }
+        okButton.onClick = function() {
+            renameLayers(app.activeDocument, searchInput.text, replaceInput.text);
+            dialog.close();
+        }
 
-    cancelButton.onClick = function() {
-        dialog.close();
-    }
+        cancelButton.onClick = function() {
+            dialog.close();
+        }
 
-    dialog.show();
+        dialog.show();
 
-    function renameLayers(doc, find, replace) {
-        for (var i = 0; i < doc.layers.length; i++) {
-            var layer = doc.layers[i];
-            if (!layer.locked && layer.visible) {
-                layer.name = layer.name.replace(find, replace);
-            }
-            if (layer.layers.length > 0) {
-                renameLayers(layer, find, replace);
+        function renameLayers(doc, find, replace) {
+            for (var i = 0; i < doc.layers.length; i++) {
+                var layer = doc.layers[i];
+                if (!layer.locked && layer.visible) {
+                    layer.name = layer.name.replace(find, replace);
+                }
+                if (layer.layers.length > 0) {
+                    renameLayers(layer, find, replace);
+                }
             }
         }
-    }
-    app.redraw();
+        app.redraw();
     }
 //#endregion Renamer
 
@@ -552,7 +608,7 @@ var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeBu
 
         // Make sure the array is empty before starting
         invisibleLayers = [];
-        
+
         for (var i = 0; i < doc.layers.length; i++) {
             var layer = doc.layers[i];
             if (layer != selLayer && layer.visible) {
@@ -574,7 +630,6 @@ var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeBu
         invisibleLayers = [];
         app.redraw();
     }
-
 //#endregion solo/unsolo
 
-    winAIRHEAD.show();
+winAIRHEAD.show();
