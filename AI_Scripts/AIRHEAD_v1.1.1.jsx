@@ -1,8 +1,10 @@
+app.preferences.setBooleanPreference('ShowExternalJSXWarning', false); // Fix drag and drop a .jsx file
+
 var vers = "1.1.1"; // change version number here and it gets updated in the panel's name
 
 // WINAIRHEAD
 // ==========
-var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {resizeable: true}); 
+var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
     winAIRHEAD.orientation = "column"; 
     winAIRHEAD.alignChildren = ["center","top"]; 
     winAIRHEAD.spacing = 10; 
@@ -21,36 +23,41 @@ var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {resizeabl
         buttUngrouper.text = "Ungrouper";
         buttUngrouper.onClick = function() {
         ungrouper();
-        }
+        app.redraw();
+    };
 
     var buttFata = panel1.add("button", undefined, undefined, {name: "buttFata"}); 
         buttFata.text = "Fit Artboards to Artwork"; 
         buttFata.onClick = function() {
         openFata();
-        }
+    };
 
     var buttRenamer = panel1.add("button", undefined, undefined, {name: "buttRenamer"}); 
         buttRenamer.text = "Renamer"; 
         buttRenamer.onClick = function() {
         openRenamer();
-        }
+        app.redraw();
+    };
 
     var buttUnlockAll = panel1.add("button", undefined, undefined, {name: "buttUnlockAll"}); 
         buttUnlockAll.text = "Unlock All Layers"; 
         buttUnlockAll.onClick = function() {
         unlocker();
+        app.redraw();
     };
 
     var buttSolo = panel1.add("button", undefined, undefined, {name: "buttSolo"}); 
         buttSolo.text = "Solo"; 
         buttSolo.onClick = function() {
         soloLayers();
+        app.redraw();
     };
 
     var buttUnsolo = panel1.add("button", undefined, undefined, {name: "buttUnsolo"}); 
         buttUnsolo.text = "Unsolo"; 
         buttUnsolo.onClick = function() {
         unsoloLayers();
+        app.redraw();
     };
 
 //#endregion event listeners
@@ -266,6 +273,7 @@ var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {resizeabl
         try {
         main();
         } catch (e) {}
+        app.redraw();
         };
 //#endregion FitArtboardsToArtwork
 
@@ -453,6 +461,7 @@ var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {resizeabl
                 alert(err + ': on line ' + err.line, 'Script Error', true);
             }
         }
+        app.redraw();
     };
 //#endregion Ungrouper
 
@@ -530,6 +539,7 @@ var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {resizeabl
             }
         }
     }
+    app.redraw();
     }
 //#endregion Renamer
 
@@ -562,6 +572,7 @@ var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {resizeabl
 
         // Clear the array after making all layers visible
         invisibleLayers = [];
+        app.redraw();
     }
 
 //#endregion solo/unsolo
