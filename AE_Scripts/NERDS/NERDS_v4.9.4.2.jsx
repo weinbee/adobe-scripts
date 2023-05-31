@@ -1670,7 +1670,7 @@ vers = "4.9.4.2"; // change version number here and it gets updated in the panel
                     }
                 }
             } catch (err) {
-            alert('Please deselect all layers in comp before running :D');
+            alert('Please deselect all layers in comp :D');
             } finally {
                 app.endUndoGroup();
             }
