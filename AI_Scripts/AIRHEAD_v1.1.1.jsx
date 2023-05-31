@@ -1,10 +1,10 @@
-// app.preferences.setBooleanPreference('ShowExternalJSXWarning', false); // Fix drag and drop a .jsx file
+app.preferences.setBooleanPreference('ShowExternalJSXWarning', false); // Fix drag and drop a .jsx file
 
 var vers = "1.1.1"; // change version number here and it gets updated in the panel's name
 
 // WINAIRHEAD
 // ==========
-var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
+var winAIRHEAD = new Window("dialog", "AIRHEAD_v" + vers, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
     winAIRHEAD.orientation = "column"; 
     winAIRHEAD.alignChildren = ["center","top"]; 
     winAIRHEAD.spacing = 10; 
@@ -630,5 +630,9 @@ var winAIRHEAD = new Window("palette", "AIRHEAD_v" + vers, undefined, {maximizeB
 //#endregion solo/unsolo
 
 winAIRHEAD.show();
+
+
+// trial stuff here:
+// 		    redraw();
 
 
