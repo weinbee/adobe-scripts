@@ -207,7 +207,7 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             // iconButtNull = createANull
             iconButtNull.onClick = function() {
             createANull();
-            app.Activate
+            app.activeViewer.setActive();
         };
 
         var iconButtRename_imgString = strings.imgStrings.rename;
