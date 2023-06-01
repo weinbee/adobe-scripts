@@ -327,8 +327,13 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
 
 //#region Dropdowns
         // DROPDOWNS
+        var grpHkPlusQuestionMark = grpDropDown.add("group", undefined, {
+        });
+            grpHkPlusQuestionMark.orientation = "row";
+            grpHkPlusQuestionMark.alignChildren = ["center", "center"];
+            grpHkPlusQuestionMark.spacing = 0;
         var hk_array = ["Housekeeping", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Sort", "Reduce Project", "Collect Files...", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Rename Comp to File Name", "Clear Render Queue", "Purge All Memory & Disk Cache"];
-        var hkHelpButton = grpDropdown.add("button", undefined, "?");
+        var hkHelpButton = grpHkPlusQuestionMark.add("button", undefined, "?");
             hkHelpButton.helpTip = "Click for help with the Housekeeping menu";
             hkHelpButton.onClick = function() {
                 alert("Housekeeping Menu Options: \n\n" +
@@ -340,8 +345,13 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                     "Purge All Memory & Disk Cache: " + strings.helpTips.HKpamdc
                 );
             };
+        var grpUPlusQuestionMark = grpDropDown.add("group", undefined, {
+        });
+            grpUPlusQuestionMark.orientation = "row";
+            grpUPlusQuestionMark.alignChildren = ["center", "center"];
+            grpUPlusQuestionMark.spacing = 0;
         var u_array = ["Utilities", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Calc Distance (2 Layers)", "Calc Difference (2 Keyframes)", "Precompose Individually", "Round Position", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Select All Children", "Select All Unparented Layers", "Select All Non-Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Nulls", "Unlock All Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Layers", "Unlock All Layers", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Scale Composition", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Style: Edge Blur", "Style: Pixelation"];
-        var uHelpButton = grpDropdown.add("button", undefined, "?");
+        var uHelpButton = grpUPlusQuestionMark.add("button", undefined, "?");
             uHelpButton.helpTip = "Explanations of utilities menu items";
             uHelpButton.onClick = function() {
                 alert("Utilities Menu Options: \n\n" +
