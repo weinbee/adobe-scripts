@@ -239,7 +239,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
 
         // GRP_EaseDrop
         var grpEaseDrop = windowNERDS.add("group", undefined, {
-            name: "grpDropDown"
+            name: "grpEaseDrop"
         });
         grpEaseDrop.orientation = "column";
         grpEaseDrop.alignChildren = ["left", "left"];
@@ -315,14 +315,14 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
 
         // GRP_DROPDOWN
         // ============
-        var grpDropDown = grpEaseDrop.add("group", undefined, {
+        var grpDropdown = grpEaseDrop.add("group", undefined, {
             name: "grpDropDown"
         });
-        grpDropDown.orientation = "column";
-        grpDropDown.alignChildren = ["left", "left"];
-        grpDropDown.spacing = 0;
-        grpDropDown.margins = [4, 5, 4, 4];
-        grpDropDown.alignment = ["fill", "top"];
+        grpDropdown.orientation = "column";
+        grpDropdown.alignChildren = ["left", "left"];
+        grpDropdown.spacing = 0;
+        grpDropdown.margins = [4, 5, 4, 4];
+        grpDropdown.alignment = ["fill", "top"];
 //#endregion UI stuff
 
 //#region Dropdowns
