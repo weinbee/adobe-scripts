@@ -5,7 +5,7 @@ No Copyright, Nic Hartmann™ 2023
 Use Without Caution
 */
 
-vers = "4.9.4.2"; // change version number here and it gets updated in the panel's name
+vers = "4.9.4.3"; // change version number here and it gets updated in the panel's name
 (function createDockablePanel(thisObj) {
     function buildUI(thisObj) {
         var windowNERDS = (thisObj instanceof Panel) ? thisObj : new Window('palette', 'NERDS_v' + vers + '', undefined, {
@@ -1947,49 +1947,6 @@ vers = "4.9.4.2"; // change version number here and it gets updated in the panel
         }
 
 //#endregion 'Misc for dropdowns'
-
-        // test mergeShapeLayers
-            function copyKeyframes(srcProperty, destProperty) {
-            if (srcProperty.numKeys > 0) {
-            for (var i = 1; i <= srcProperty.numKeys; i++) {
-            destProperty.setValueAtTime(srcProperty.keyTime(i), srcProperty.keyValue(i));
-            destProperty.setEaseAtKey(i, srcProperty.keyInTemporalEase(i), srcProperty.keyOutTemporalEase(i));
-            if (srcProperty.propertyValueType == PropertyValueType.ThreeD_SPATIAL || 
-            srcProperty.propertyValueType == PropertyValueType.TwoD_SPATIAL) {
-            destProperty.setSpatialTangentsAtKey(i, srcProperty.keyInSpatialTangent(i), srcProperty.keyOutSpatialTangent(i));
-            }
-            }
-            } else {
-            destProperty.setValue(srcProperty.value);
-            }
-            }
-
-            function mergeShapeLayers() {
-            app.beginUndoGroup("Merge Shape Layers");
-            var comp = app.project.activeItem;
-            var layers = comp.selectedLayers;
-            var newLayer = comp.layers.addShape();
-            newLayer.name = "Merged Shape Layer";
-            for (var i = 0; i < layers.length; i++) {
-            var shapeContents = layers[i].property("ADBE Root Vectors Group");
-            for (var j = 1; j <= shapeContents.numProperties; j++) {
-            var shapeGroup = shapeContents.property(j);
-            var newShapeGroup = newLayer.property("ADBE Root Vectors Group").addProperty(shapeGroup.propertyType);
-            newShapeGroup.name = shapeGroup.name;
-            for (var p = 1; p <= shapeGroup.numProperties; p++) {
-            var srcProperty = shapeGroup.property(p);
-            var destProperty = newShapeGroup.addProperty(srcProperty.propertyType);
-            destProperty.name = srcProperty.name;
-            copyKeyframes(srcProperty, destProperty);
-            }
-            }
-            layers[i].enabled = false;
-            }
-            app.endUndoGroup();
-            }
-
-
-
 
 ///////////////////////////this is the end of the script. don't fuck with this part////////////////////////////////////////
         return windowNERDS;
