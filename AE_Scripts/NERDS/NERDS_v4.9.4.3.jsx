@@ -121,7 +121,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
         mergeMini.onclick = function() {
         app.activeViewer.setActive();
         };
-        
+
         // GRPMAINBUTTS
         // ============
         var grpMainButts = windowNERDS.add("group", undefined, {
@@ -152,22 +152,21 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
             app.Activate
         };
 
-        var iconButtReverse_imgString = strings.imgStrings.reverse; 
-        var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {name: "iconButtReverse", style: "toolbutton"}); 
+        var iconButtReverse_imgString = strings.imgStrings.reverse;
+        var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {name: "iconButtReverse", style: "toolbutton"});
             iconButtReverse.helpTip = strings.helpTips.reverse;
             // iconButtReverse's onclick is below it's function
 
-        var iconButtLoop_imgString = strings.imgStrings.loop; 
-        var iconButtLoop = col1Butts.add("iconbutton", undefined, File.decode(iconButtLoop_imgString), {name: "iconButtLoop", style: "toolbutton"}); 
+        var iconButtLoop_imgString = strings.imgStrings.loop;
+        var iconButtLoop = col1Butts.add("iconbutton", undefined, File.decode(iconButtLoop_imgString), {name: "iconButtLoop", style: "toolbutton"});
         iconButtLoop.helpTip = strings.helpTips.loop;
         iconButtLoop.onClick = function() {
             loopAtPlayhead();
             app.activeViewer.setActive();
         };
 
-
         var iconButtColor_imgString = strings.imgStrings.color;
-                var iconButtColor = col1Butts.add("iconbutton", undefined, File.decode(iconButtColor_imgString), {name: "iconButtColor", style: "toolbutton"}); 
+                var iconButtColor = col1Butts.add("iconbutton", undefined, File.decode(iconButtColor_imgString), {name: "iconButtColor", style: "toolbutton"});
                     iconButtColor.helpTip = strings.helpTips.color;
                     iconButtColor.onClick = function() {
                     colorPicker();
@@ -184,8 +183,8 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                 col2Butts.spacing = 0;
                 col2Butts.margins = 0;
 
-        var iconButtRename_imgString = strings.imgStrings.rename; 
-                var iconButtRename = col2Butts.add("iconbutton", undefined, File.decode(iconButtRename_imgString), {name: "iconButtRename", style: "toolbutton"}); 
+        var iconButtRename_imgString = strings.imgStrings.rename;
+                var iconButtRename = col2Butts.add("iconbutton", undefined, File.decode(iconButtRename_imgString), {name: "iconButtRename", style: "toolbutton"});
                     iconButtRename.helpTip = strings.helpTips.rename;
                     iconButtRename.onClick = function() {
                     var win = new Window('palette', 'Layer Rename', [300, 100, 645, 396]);
@@ -195,30 +194,30 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                     }
                     app.activeViewer.setActive();
                 }
-        var iconButtSmartXY_imgString = strings.imgStrings.smartxy; 
-        var iconButtSmartXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartXY_imgString), {name: "iconButtSmartXY", style: "toolbutton"}); 
+        var iconButtSmartXY_imgString = strings.imgStrings.smartxy;
+        var iconButtSmartXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartXY_imgString), {name: "iconButtSmartXY", style: "toolbutton"});
             iconButtSmartXY.helpTip = strings.helpTips.smartxy;
             iconButtSmartXY.onClick = function() {
             separateDimensionsPreserveEasing();
             app.activeViewer.setActive();
         }
 
-/*         var iconButtSort_imgString = strings.imgStrings.sort; 
-        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"}); 
+/*         var iconButtSort_imgString = strings.imgStrings.sort;
+        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
             iconButtSort.helpTip = strings.helpTips.sort;
             iconButtSort.onClick = function() {
             sortProjectItems();
             app.activeViewer.setActive();
         } */
 
-        var iconButtExplode_imgString = strings.imgStrings.explode; 
-        var iconButtExplode = col2Butts.add("iconbutton", undefined, File.decode(iconButtExplode_imgString), {name: "iconButtExplode", style: "toolbutton"}); 
+        var iconButtExplode_imgString = strings.imgStrings.explode;
+        var iconButtExplode = col2Butts.add("iconbutton", undefined, File.decode(iconButtExplode_imgString), {name: "iconButtExplode", style: "toolbutton"});
             iconButtExplode.helpTip = strings.helpTips.explode;
             iconButtExplode.onClick = function() {
             explodeShapeLayers();
             app.activeViewer.setActive();
         }
-        
+
         // GRP_EaseDrop
         var grpEaseDrop = windowNERDS.add("group", undefined, {
             name: "grpDropDown"
@@ -250,23 +249,26 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
 
             // Slider for Easing
             var slider = sliderGroup.add("slider", [10, 10, 142, 30], 0, 0, 100);
-                slider.helpTip = string.helpTips.slider; 
+                slider.helpTip = string.helpTips.slider;
                 slider.value = 50;
                 slider.stepdelta = 1;
 
             // EaseButts Group
-            var grpEaseButts = panelEasement.add("group", undefined, {name: "grpEaseButts"}); 
-                grpEaseButts.orientation = "row"; 
-                grpEaseButts.alignChildren = ["center","center"]; 
-                grpEaseButts.spacing = 10; 
-                grpEaseButts.margins = 0; 
+            var grpEaseButts = panelEasement.add("group", undefined, {name: "grpEaseButts"});
+                grpEaseButts.orientation = "row";
+                grpEaseButts.alignChildren = ["center","center"];
+                grpEaseButts.spacing = 10;
+                grpEaseButts.margins = 0;
             var inButton = grpEaseButts.add("button", [10, 10, 35, 35], "◁");
+                inButton.helpTip = strings.helpTips.inButton;
             var bothButton = grpEaseButts.add("button", [50, 10, 75, 35], "◁▷");
+                bothButton.helpTip = strings.helpTips.bothButton;
             var outButton = grpEaseButts.add("button", [90, 10, 115, 35], "▷");
+                outButton.helpTip = strings.helpTips.outButton;
             var valueText = grpEaseButts.add("edittext", undefined, slider.value.toFixed(0));
-                valueText.preferredSize.width = 35; 
-                valueText.preferredSize.height = 23; 
-                valueText.alignment = ["center","center"]; 
+                valueText.preferredSize.width = 35;
+                valueText.preferredSize.height = 23;
+                valueText.alignment = ["center","center"];
                 valueText.bounds = [90, 10, 150, 30];
                 slider.onChanging = function() {
                 valueText.text = this.value.toFixed(0);
@@ -290,7 +292,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                 valueText.selectAll();
             });
 //#endregion Easement Easing
-  
+
         // GRP_DROPDOWN
         // ============
         var grpDropDown = grpEaseDrop.add("group", undefined, {
@@ -1324,7 +1326,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                 for (var h = 1; h < i; h++) {
                     duplicate.property("ADBE Root Vectors Group").property(h - x).remove();
                     x++; d++;
-                }    
+                }
                 for (var k = 2; k <= (shapeContents.numProperties - d ); k++) {
                     duplicate.property("ADBE Root Vectors Group").property(k - y).remove();
                     y++;
@@ -1335,13 +1337,13 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                 layer.duplicate();
                 var duplicate = comp.layer(layer.index - 1);
                 duplicate.name = layer.selectedProperties[i].name; // Set layer name to current property name
-                x = 0; y = 0; d = 0;            
+                x = 0; y = 0; d = 0;
                 for (var h = 1; h < i; h++) {
                     if (duplicate.property("ADBE Root Vectors Group").property(h - x).name != layer.selectedProperties[i].name) {
                         duplicate.property("ADBE Root Vectors Group").property(h - x).remove();
                         x++; d++;
                     }
-                }    
+                }
                 for (var k = 1; k <= (shapeContents.numProperties - d ); k++) {
                     if (duplicate.property("ADBE Root Vectors Group").property(k - y).name != layer.selectedProperties[i].name) {
                         duplicate.property("ADBE Root Vectors Group").property(k - y).remove();
@@ -1797,7 +1799,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                         null3DLayer.threeDLayer = true;
                         // Set its position to (0,0,0).
                         null3DLayer.position.setValue([0, 0, 0]);
-                        // Set null3DLayer as parent of all layers that don't have parents.  
+                        // Set null3DLayer as parent of all layers that don't have parents.
                         makeParentLayerOfAllUnparented(activeComp, null3DLayer);
                         // Set new comp width and height.
                         activeComp.width = Math.floor(activeComp.width * scale_factor);
@@ -1902,7 +1904,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                 }
 
 
-                // 
+                //
                 // The main script.
                 //
                 if (parseFloat(app.version) < 8) {
