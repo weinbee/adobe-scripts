@@ -1,11 +1,11 @@
 /*
-NERDS_vX.Y.Y
+NERDS_vW.X.Y.Z
 Written with love for the students of VCT278 SPR 2023
 No Copyright, Nic Hartmann™ 2023
 Use Without Caution
 */
 
-vers = "4.9.4.3"; // change version number here and it gets updated in the panel's name
+vers = "4.9.4.5"; // change version number here and it gets updated in the panel's name
 (function createDockablePanel(thisObj) {
     function buildUI(thisObj) {
         var windowNERDS = (thisObj instanceof Panel) ? thisObj : new Window('palette', 'NERDS_v' + vers + '', undefined, {
