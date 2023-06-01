@@ -368,24 +368,19 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                     "Unlock All Layers: " + strings.helpTips.Uual + "\n" +
                     "Scale Composition: " + strings.helpTips.Uscc + "\n" +
                     "Style: Edge Blur: " + strings.helpTips.Useb + "\n" +
-                    "Style: Pixelation: " + strings.helpTips.Usp
-                );
+                    "Style: Pixelation: " + strings.helpTips.Usp);
             };
 
-        var hkDropdown = grpDropdown.add("dropdownlist", undefined, undefined, {
+        var hkDropdown = grpHkPlusQuestionMark.add("dropdownlist", undefined, undefined, {
             name: "hkDropdown",
-            items: hk_array
-        });
+            items: hk_array});
             hkDropdown.alignment = ["center", "center"];
-
-        var uDropdown = grpDropdown.add("dropdownlist", undefined, undefined, {
+            hkDropdown.selection = 0;
+        var uDropdown = grpUPlusQuestionMark.add("dropdownlist", undefined, undefined, {
             name: "uDropdown",
-            items: u_array
-        });
+            items: u_array});
             uDropdown.alignment = ["center", "center"];
-
-        hkDropdown.selection = 0;
-        uDropdown.selection = 0;
+            uDropdown.selection = 0;
 
         hkDropdown.onChange = function() {
             switch (this.selection.text) {
