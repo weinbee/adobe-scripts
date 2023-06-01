@@ -163,7 +163,7 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             col1Butts.margins = 0;
 
         var iconButtSort_imgString = strings.imgStrings.sort;
-        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
+        var iconButtSort = col1Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
             iconButtSort.helpTip = strings.helpTips.sort;
             iconButtSort.onClick = function() {
             sortProjectItems();
@@ -202,7 +202,7 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             col2Butts.margins = 0;
 
         var iconButtNull_imgString = strings.imgStrings.null0;
-        var iconButtNull = col1Butts.add("iconbutton", undefined, File.decode(iconButtNull_imgString), {name: "iconButtNull", style: "toolbutton"});
+        var iconButtNull = col2Butts.add("iconbutton", undefined, File.decode(iconButtNull_imgString), {name: "iconButtNull", style: "toolbutton"});
             iconButtNull.helpTip = strings.helpTips.null0;
             // iconButtNull = createANull
             iconButtNull.onClick = function() {
@@ -1736,7 +1736,6 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             }
         }
 
-
         ///// Purge All Memory & Disk Cache /////
         var purgeAllMemDiskCache = function() {
         app.executeCommand(app.findMenuCommandId("All Memory & Disk Cache..."));
@@ -1955,7 +1954,6 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
                         }
                     }
                 }
-
 
                 //
                 // The main script.
