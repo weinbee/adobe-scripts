@@ -316,7 +316,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
         // GRP_DROPDOWN
         // ============
         var grpDropdown = grpEaseDrop.add("group", undefined, {
-            name: "grpDropDown"
+            name: "grpDropdown"
         });
         grpDropdown.orientation = "column";
         grpDropdown.alignChildren = ["left", "left"];
@@ -327,7 +327,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
 
 //#region Dropdowns
         // DROPDOWNS
-        var grpHkPlusQuestionMark = grpDropDown.add("group", undefined, {
+        var grpHkPlusQuestionMark = grpDropdown.add("group", undefined, {
         });
             grpHkPlusQuestionMark.orientation = "row";
             grpHkPlusQuestionMark.alignChildren = ["center", "center"];
@@ -345,7 +345,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                     "Purge All Memory & Disk Cache: " + strings.helpTips.HKpamdc
                 );
             };
-        var grpUPlusQuestionMark = grpDropDown.add("group", undefined, {
+        var grpUPlusQuestionMark = grpDropdown.add("group", undefined, {
         });
             grpUPlusQuestionMark.orientation = "row";
             grpUPlusQuestionMark.alignChildren = ["center", "center"];
