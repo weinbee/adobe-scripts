@@ -174,7 +174,7 @@ vers = "4.9.4.5"; // change version number here and it gets updated in the panel
         var iconButtReverse_imgString = strings.imgStrings.reverse;
         var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {name: "iconButtReverse", style: "toolbutton"});
             iconButtReverse.helpTip = strings.helpTips.reverse;
-            // iconButtReverse's onclick is below it's function
+            /* Note: iconButtReverse's onclick is below it's function */
 
         var iconButtLoop_imgString = strings.imgStrings.loop;
         var iconButtLoop = col1Butts.add("iconbutton", undefined, File.decode(iconButtLoop_imgString), {name: "iconButtLoop", style: "toolbutton"});
@@ -234,6 +234,14 @@ vers = "4.9.4.5"; // change version number here and it gets updated in the panel
             iconButtExplode.helpTip = strings.helpTips.explode;
             iconButtExplode.onClick = function() {
             explodeShapeLayers();
+            app.activeViewer.setActive();
+        }
+
+        var iconButtSort_imgString = strings.imgStrings.sort;
+        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
+            iconButtSort.helpTip = strings.helpTips.sort;
+            iconButtSort.onClick = function() {
+            sortProjectItems();
             app.activeViewer.setActive();
         }
 
