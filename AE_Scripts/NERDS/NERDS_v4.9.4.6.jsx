@@ -162,13 +162,12 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             col1Butts.spacing = 0;
             col1Butts.margins = 0;
 
-        var iconButtNull_imgString = strings.imgStrings.null0;
-        var iconButtNull = col1Butts.add("iconbutton", undefined, File.decode(iconButtNull_imgString), {name: "iconButtNull", style: "toolbutton"});
-            iconButtNull.helpTip = strings.helpTips.null0;
-            // iconButtNull = createANull
-            iconButtNull.onClick = function() {
-            createANull();
-            app.Activate
+        var iconButtSort_imgString = strings.imgStrings.sort;
+        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
+            iconButtSort.helpTip = strings.helpTips.sort;
+            iconButtSort.onClick = function() {
+            sortProjectItems();
+            app.activeViewer.setActive();
         };
 
         var iconButtReverse_imgString = strings.imgStrings.reverse;
@@ -202,6 +201,15 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             col2Butts.spacing = 0;
             col2Butts.margins = 0;
 
+        var iconButtNull_imgString = strings.imgStrings.null0;
+        var iconButtNull = col1Butts.add("iconbutton", undefined, File.decode(iconButtNull_imgString), {name: "iconButtNull", style: "toolbutton"});
+            iconButtNull.helpTip = strings.helpTips.null0;
+            // iconButtNull = createANull
+            iconButtNull.onClick = function() {
+            createANull();
+            app.Activate
+        };
+
         var iconButtRename_imgString = strings.imgStrings.rename;
         var iconButtRename = col2Butts.add("iconbutton", undefined, File.decode(iconButtRename_imgString), {name: "iconButtRename", style: "toolbutton"});
             iconButtRename.helpTip = strings.helpTips.rename;
@@ -212,7 +220,7 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             w.show();
             }
             app.activeViewer.setActive();
-        }
+        };
 
         var iconButtSmartXY_imgString = strings.imgStrings.smartxy;
         var iconButtSmartXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartXY_imgString), {name: "iconButtSmartXY", style: "toolbutton"});
@@ -220,7 +228,7 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             iconButtSmartXY.onClick = function() {
             separateDimensionsPreserveEasing();
             app.activeViewer.setActive();
-        }
+        };
 
         var iconButtExplode_imgString = strings.imgStrings.explode;
         var iconButtExplode = col2Butts.add("iconbutton", undefined, File.decode(iconButtExplode_imgString), {name: "iconButtExplode", style: "toolbutton"});
@@ -228,15 +236,7 @@ vers = "4.9.4.6"; // change version number here and it gets updated in the panel
             iconButtExplode.onClick = function() {
             explodeShapeLayers();
             app.activeViewer.setActive();
-        }
-
-        var iconButtSort_imgString = strings.imgStrings.sort;
-        var iconButtSort = col2Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
-            iconButtSort.helpTip = strings.helpTips.sort;
-            iconButtSort.onClick = function() {
-            sortProjectItems();
-            app.activeViewer.setActive();
-        }
+        };
 
         // GRP_EaseDrop
         var grpEaseDrop = windowNERDS.add("group", undefined, {
