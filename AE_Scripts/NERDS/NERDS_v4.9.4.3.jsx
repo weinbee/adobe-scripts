@@ -253,7 +253,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
 
             // Slider for Easing
             var slider = sliderGroup.add("slider", [10, 10, 142, 30], 0, 0, 100);
-                slider.helpTip = string.helpTips.slider;
+                slider.helpTip = strings.helpTips.slider;
                 slider.value = 50;
                 slider.stepdelta = 1;
 
