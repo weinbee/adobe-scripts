@@ -316,13 +316,12 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
         // GRP_DROPDOWN
         // ============
         var grpDropdown = grpEaseDrop.add("group", undefined, {
-            name: "grpDropdown"
-        });
+            name: "grpDropdown"});
             grpDropdown.orientation = "column";
-            grpDropdown.alignChildren = ["left", "left"];
+            grpDropdown.alignChildren = ["center", "center"];
             grpDropdown.spacing = 0;
             grpDropdown.margins = [4, 5, 4, 4];
-            grpDropdown.alignment = ["fill", "top"];
+            grpDropdown.alignment = ["center", "center"];
 //#endregion UI stuff
 
 //#region Dropdowns
@@ -330,7 +329,7 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
         var grpHkPlusQuestionMark = grpDropdown.add("group", undefined, {name: "grpHkPlusQuestionMark"});
             grpHkPlusQuestionMark.orientation = "row";
             grpHkPlusQuestionMark.alignChildren = ["center","center"];
-            grpHkPlusQuestionMark.spacing = 10;
+            grpHkPlusQuestionMark.spacing = 0;
             grpHkPlusQuestionMark.margins = 0;
         var hk_array = ["Housekeeping", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Sort", "Reduce Project", "Collect Files...", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Rename Comp to File Name", "Clear Render Queue", "Purge All Memory & Disk Cache"];
         var hkDropdown = grpHkPlusQuestionMark.add("dropdownlist", undefined, undefined, {
@@ -338,7 +337,6 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
             items: hk_array});
             hkDropdown.alignment = ["center", "center"];
             hkDropdown.selection = 0;
-
             hkDropdown.onChange = function() {
                 switch (this.selection.text) {
                     case "Sort":
@@ -367,23 +365,21 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
                 }
                 this.selection = 0; // Reset menu selection to "Housekeeping"
         };
-        var hkHelpButton = grpHkPlusQuestionMark.add("button", undefined, "?");
-            hkHelpButton.helpTip = "Click for help with the Housekeeping menu";
-            hkHelpButton.onClick = function() {
-                alert("Housekeeping Menu Options: \n\n" +
-                    "Sort: " + strings.helpTips.HKsrt + "\n" +
-                    "Reduce Project: " + strings.helpTips.HKrdc + "\n" +
-                    "Collect Files...: " + strings.helpTips.HKclct + "\n" +
-                    "Rename Comp to File Name: " + strings.helpTips.HKrctfn + "\n" +
-                    "Clear Render Queue: " + strings.helpTips.HKcrq + "\n" +
+        var hkHelpStaticText = grpHkPlusQuestionMark.add("statictext", undefined, undefined, {name: "?"});
+            hkHelpStaticText.text = "?";
+            hkHelpStaticText.helpTip = ("Housekeeping Menu Options: \n" +
+                    "_____________________________________________" + "\n\n" +
+                    "Sort: " + strings.helpTips.HKsrt + "\n\n" +
+                    "Reduce Project: " + strings.helpTips.HKrdc + "\n\n" +
+                    "Collect Files...: " + strings.helpTips.HKclct + "\n\n" +
+                    "Rename Comp to File Name: " + strings.helpTips.HKrctfn + "\n\n" +
+                    "Clear Render Queue: " + strings.helpTips.HKcrq + "\n\n" +
                     "Purge All Memory & Disk Cache: " + strings.helpTips.HKpamdc
                 );
-            };
-
         var grpUPlusQuestionMark = grpDropdown.add("group", undefined, {name: "grpUPlusQuestionMark"});
             grpUPlusQuestionMark.orientation = "row";
             grpUPlusQuestionMark.alignChildren = ["center","center"];
-            grpUPlusQuestionMark.spacing = 10;
+            grpUPlusQuestionMark.spacing = 0;
             grpUPlusQuestionMark.margins = 0;
         var u_array = ["Utilities", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Calc Distance (2 Layers)", "Calc Difference (2 Keyframes)", "Precompose Individually", "Round Position", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Select All Children", "Select All Unparented Layers", "Select All Non-Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Nulls", "Unlock All Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Layers", "Unlock All Layers", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Scale Composition", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Style: Edge Blur", "Style: Pixelation"];
         var uDropdown = grpUPlusQuestionMark.add("dropdownlist", undefined, undefined, {
@@ -455,25 +451,24 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
             }
             this.selection = 0; // Reset menu selection to "Utilities"
         };
-        var uHelpButton = grpUPlusQuestionMark.add("button", undefined, "?");
-            uHelpButton.helpTip = "Explanations of utilities menu items";
-            uHelpButton.onClick = function() {
-                alert("Utilities Menu Options: \n\n" +
-                    "Calc Difference (2 Keyframes): " + strings.helpTips.Ucdkf + "\n" +
-                    "Calc Distance (2 layers): " + strings.helpTips.Ucd2l + "\n" +
-                    "Precompose Individually: " + strings.helpTips.Upi + "\n" +
-                    "Round Position: " + strings.helpTips.Urp + "\n" +
-                    "Select All Children: " + strings.helpTips.Usac + "\n" +
-                    "Select All Unparented Layers: " + strings.helpTips.Usaul + "\n" +
-                    "Select All Non-Nulls: " + strings.helpTips.Usann + "\n" +
-                    "Lock All Nulls: " + strings.helpTips.Ulan + "\n" +
-                    "Unlock All Nulls: " + strings.helpTips.Uun + "\n" +
-                    "Lock All Layers: " + strings.helpTips.Ulal + "\n" +
-                    "Unlock All Layers: " + strings.helpTips.Uual + "\n" +
-                    "Scale Composition: " + strings.helpTips.Uscc + "\n" +
-                    "Style: Edge Blur: " + strings.helpTips.Useb + "\n" +
+        var uHelpStaticText = grpUPlusQuestionMark.add("statictext", undefined, undefined, {name: "?"});
+            uHelpStaticText.text = "?";
+            uHelpStaticText.helpTip = ("Utilities Menu Options: \n" +
+                    "_____________________________________________" + "\n\n" +
+                    "Calc Difference (2 Keyframes): " + strings.helpTips.Ucdkf + "\n\n" +
+                    "Calc Distance (2 layers): " + strings.helpTips.Ucd2l + "\n\n" +
+                    "Precompose Individually: " + strings.helpTips.Upi + "\n\n" +
+                    "Round Position: " + strings.helpTips.Urp + "\n\n" +
+                    "Select All Children: " + strings.helpTips.Usac + "\n\n" +
+                    "Select All Unparented Layers: " + strings.helpTips.Usaul + "\n\n" +
+                    "Select All Non-Nulls: " + strings.helpTips.Usann + "\n\n" +
+                    "Lock All Nulls: " + strings.helpTips.Ulan + "\n\n" +
+                    "Unlock All Nulls: " + strings.helpTips.Uun + "\n\n" +
+                    "Lock All Layers: " + strings.helpTips.Ulal + "\n\n" +
+                    "Unlock All Layers: " + strings.helpTips.Uual + "\n\n" +
+                    "Scale Composition: " + strings.helpTips.Uscc + "\n\n" +
+                    "Style: Edge Blur: " + strings.helpTips.Useb + "\n\n" +
                     "Style: Pixelation: " + strings.helpTips.Usp);
-        };
 //#endregion dropdowns
 
         /*
