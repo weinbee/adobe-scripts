@@ -4,7 +4,7 @@ var vers = "1.1.1"; // change version number here and it gets updated in the pan
 
 // WINAIRHEAD
 // ==========
-var winAIRHEAD = new ShowPalette("dialog", "AIRHEAD™_v" + vers, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
+var winAIRHEAD = new Window("palette", "AIRHEAD™_v" + vers, undefined, {maximizeButton: true, minimizeButton: true, resizeable: true}); 
     winAIRHEAD.orientation = "column"; 
     winAIRHEAD.alignChildren = ["center","top"]; 
     winAIRHEAD.spacing = 10; 
