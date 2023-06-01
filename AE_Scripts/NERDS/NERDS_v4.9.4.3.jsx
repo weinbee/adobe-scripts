@@ -26,10 +26,10 @@ vers = "4.9.4.3"; // change version number here and it gets updated in the panel
             sort: "Sort all project items into folders by category.",
             explode: "Explodes all shapes within a shape layer into separate layers!",
             color: "Opens a color picker. Pick any color and then copy the hex code to use it elsewhere.",
-            smartxy: "Separates the layer's X and Y positions, and attempts to retain their easing/velocity influence."
-            slider: "Drag me to set the easing amount, then press one of the three buttons below me."
-            inButton: "Drag slider to desired amount, click me, I will set easing of IN values only."
-            bothButton: "Drag slider to desired amount, click me, I will set easing of IN+OUT values."
+            smartxy: "Separates the layer's X and Y positions, and attempts to retain their easing/velocity influence.",
+            slider: "Drag me to set the easing amount, then press one of the three buttons below me.",
+            inButton: "Drag slider to desired amount, click me, I will set easing of IN values only.",
+            bothButton: "Drag slider to desired amount, click me, I will set easing of IN+OUT values.",
             outButton: "Drag slider to desired amount, click me, I will set easing of OUT values only."
             },
         imgStrings: {
