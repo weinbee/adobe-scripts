@@ -26,7 +26,7 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             sort: "Sort all project items into folders by category.",
             explode: "Explodes all shapes within a shape layer into separate layers!",
             color: "Opens a color picker. Pick any color and then copy the hex code to use it elsewhere.",
-            smartxy: "Separates the layer's X and Y positions, and attempts to retain their easing/velocity influence.",
+            smartsepxy: "Separates the layer's X and Y positions, and attempts to retain their easing/velocity influence.",
             slider: "Drag me to set the easing amount, then press one of the three buttons below me (in/both/out ◁/◁▷/▷).",
             inButton: "Drag slider to desired amount, click me, I will set easing of IN values only.",
             bothButton: "Drag slider to desired amount, click me, I will set easing of IN+OUT values.",
@@ -61,7 +61,7 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             sort:"%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00O%00%00%00%16%08%06%00%00%00%C2%81%C2%B5%C3%81%C2%B9%00%00%00%09pHYs%00%00%17%11%00%00%17%11%01%C3%8A%26%C3%B3%3F%00%00%043IDATX%C2%85%C3%A5%C2%99oh%1Be%1C%C3%87%3FMz%C3%B9%C3%97dM%16%C3%BF4%C2%B1%7F%C2%A4%05Y%C2%A1%C3%8E%C2%89%7D1(%C3%98!%1D%7B18%C2%AA%C2%A3%C2%BE%1C%C3%BA%C2%A6%1D%C3%AC%C2%85%C3%A0%C2%9B%0E%7C%C3%91%C2%A2%C2%B8%C3%997%C3%9A%17%0E%C2%BB%3A%C2%A5%C2%91%C3%A2%10%C3%87%C2%9C%C2%A9%C3%A8F6%C3%A9%26%C2%9527qN%C2%AB%2F%C3%9AT%C3%9D%2Cu4%C3%8B%C2%BA%C3%8D%C2%BB5K%1A%C2%B9%C3%B0%5C%C2%B9%C2%85%C2%A4I%C3%96%C2%B3%C2%83%C3%A6%0B%C3%87%5D%C3%AE%C2%9E%C3%A7w%C2%BF%C3%BB%3C%C2%BF%C3%A7%C3%B7%7B%C3%AER%C2%91N%C2%A7)g%C2%85%C3%83a%2F%C3%90%C2%A9m%C2%B2%2Cw%C2%86%C3%83%C3%A1%1D%C3%80%C2%93%C2%B2%2C%C2%8F%14%C3%82RY%C2%8E%C3%9C%C3%82%C3%A1%C3%B06%1D%C2%98%C2%AA%C2%AA%C3%8FD.D%C2%B0%3B%C3%AC%C3%9A%C2%A5NEQ%C3%9E%3A%C3%BF%C3%83%C3%B9%16EQ%C3%9Et%C2%B9%5C%1F%03%C2%83%C2%B2%2C%C3%9F%C3%8Ce%C2%A7l%22OD%C3%94%2B%C2%80%C2%B6o8z%C3%A2(%0E%C2%8B%C2%83%3D%C2%BB%C3%B60ye%C2%92%C3%ADOo%C3%87%C3%A9t%C2%9EVUu%C2%97%0E%C2%B3.XG%C3%80%1D%C3%80%C3%A7%C3%B3%C2%85%04%C3%84%C2%9F%C2%8C6%C3%8B%09%C3%9E%C3%A0%C3%A8%C3%89%C3%91%C3%97%C2%A6%7F%C2%9D%C2%A6%C3%BF%C2%8D~%C3%A6%C3%A6%C3%A6%08%06%C2%83%C3%8C%5E%C3%BB%C2%87%C3%98%C3%BCUZ%5B%5B%C2%B5fw%00%C2%B7%C3%9Egjz%C2%8A%C2%B1%C3%93ctuv%C3%A1s%C3%B94%C2%88%C3%A7%C2%80%11%7DJ%5B%1E%C3%A6%03%C2%AD%C2%B3N%C3%AEn%C3%9F%C2%8D%C3%BC%C2%B2%C2%9C%C2%B9%C2%AB%06NUUF%3E%3D%C3%8EWQ%07%C2%A1%C3%8F%C2%BED%07w%22%14%22%3C4%C2%84%C3%97%C3%A5%C2%A5w%7F%2F%C2%8DO4rj%C3%B2%14%C2%87%C3%9E%3D%C3%94.%C2%A27%C2%A3%C2%B2%C2%80%C3%97%C3%B6A%C3%94%3B%C3%B0w%C3%8B%C2%8E%C3%A42%C2%89%C2%B3%C2%91%C2%B3%C3%84%C3%A3%C3%B1%0C%C2%B8%C3%90%C2%B1%C3%A3%24%C2%9F%C3%AF'%C3%B9l7u%5B2%C2%91%C2%979%7F%7Df%C2%86%C2%BD%C2%B1%18%3F%0E%0Dq%C3%AC%C3%B0%C3%A1%C3%8C%C3%B9%1A%7F%0D%C3%BB%5E%C3%9D%C2%A7%1D%C2%AE%14%12%1D%5E%07%C2%90.b%C3%AB%C3%8D%C3%B2%C2%ABP%C2%9F%19C%5B%C3%AD%1E%17%C2%85%C2%8D%C2%8BE%C3%B4%C3%AD%10%C3%BD%1A%C2%8B%C3%B4-%C2%97%7F%C2%BA%C2%B4%07%C3%AE%C2%BBY%C3%95%60%5BR%C2%97%C2%98%C2%9D%C2%9D%C2%A5%C3%AF%C3%AD%3E%C3%BE%C2%BC%C3%BE%3B%C2%89%C2%89%C3%BDHS%1F%C3%91%C2%B6%C3%A5%C3%91L%C3%93%C3%B1%C2%B11%5E%C2%B4Zi%C2%B5%C3%99xA%C2%92%C2%90%C3%AC%C3%B6%0C%C3%90%C2%89%C3%AF%26%C2%B0%C3%9B%C3%ADW%C2%8DUX%C2%AF%C2%B6g%C2%80%1E%C3%A0H%C2%81A%7C%07%C2%88%03%C3%83%C3%A2wS%16%C2%A0li%0F%1E%01v%C2%8A%C3%B3%C2%97%C3%84%C3%BE%C2%B9%02%C3%B7A%C3%B4k%12%C3%BB%0A%C2%A0%C3%BB%01%C3%BCca%C2%B4bp%C2%B0%C2%AA%C2%B9%C3%AD%C3%9F%C3%B4%26%C3%AE%C2%A5%C2%B6%C3%B2%7Dc%1D%C3%98%40%C3%B2J%C3%8C%C3%AF%C2%9D%C3%87%C3%BD%C2%85%C2%9B%16%C3%8B%C3%8F(J%0D%C3%AF%7F%C3%B8%09%C3%8B%C2%8B%C2%B7%C3%B8%C2%B6%C3%A26%C3%AF-%C3%9D%22%C3%A5Hc%C3%B9%C3%A3%0E%C2%B5%C2%BF%5D%C3%86%1F%C3%B0%C3%A3w%C3%9C%C3%B8%C3%9Ax3%C2%AD%60%C2%94R14%C3%88%07%C2%84%C2%93%C2%97r%C2%8C%C3%B4%C3%A7%06%40%C3%9A5%C2%9F8%1E%16%C3%97%229lF%05%24r%00%C3%92%C3%A1%C3%B5%C3%A4%C3%A9%C2%9BK%3DY%C3%B0%C3%86%01-WQ%C3%A9%C3%9B%C2%8A%C2%B2%C3%B9%25b%C2%8B1R%C2%A9%14w%C2%A5%C2%BBxT%2B%C3%81%40%3D%C3%97%16b%2C%C2%B9jAr%C2%92%5E%C2%B8B%C3%8A%C2%93%C3%88%C3%B4%C2%AFJT%C2%91J%C2%A6%08%3C%16%C3%A0%11%C3%A7%C2%8D_%C2%AC%C2%95%C2%8E%C2%980%3D%C2%B2%C3%9A%3A%C2%AFI%3CX%3E%C3%A5%C2%9A%22g%0C%C2%8Ew%1B%C3%A0%C2%ADEZ2%C3%AA%12%C3%91%C3%97%2B%06.%1F%C3%BCU%C3%A5%C2%AC%C2%AE%C3%87%C3%AB%5D%22%C3%A8%C3%95%0Bj%C2%B5%C3%98%2B%C3%B8%3CN%40p%C3%99%C2%9C%C3%8Bm%05p%C2%B4%18N%C3%B4%C2%AFV0fJ%C3%88)k%C2%911%C2%A7%C3%A5%C2%9A%C2%96%C3%B7M%C3%83%C2%B5H%C3%B2%C3%94%C2%9B%C3%A7u%C3%B3%C3%81%C3%B1R%C3%9F0%C3%B4%C2%9C%C2%B2%1E%C3%9AY%20%C3%B2K%C2%92%C3%95V%C2%8D%C3%85Vm%C2%969m%C2%BD%C2%97%C2%A9%C2%B6E%C2%85%C3%BC%3A%C2%ABG%C2%A4%00%C3%93d%C3%B3%3Ee%C2%A6%C2%B9q%1D%5ET%C3%A4%C2%93%7C%C3%9B%C3%83%C3%90%11%C3%83R%C3%85%14I%C2%9E%06%C3%93%C3%A1U%C2%8A%C2%9C%C2%B3%C3%9Ar%C2%A3%14u%18%C2%8AD%C2%B1%C3%85B%C3%8Fi%C3%99%C3%B94RD%C3%91*Zf%C3%A7%3B%04%3C%C2%B3%C3%80!%C2%AAbW%C2%89%7D4x%03%02v%C2%B7%C2%89%C2%BE%C2%AC%C2%A8%C3%92%C3%B58%15V%C2%BBY%C3%A6%C3%8E%C3%A9%07%C2%A5%C2%BE%C2%9E%1D%10QRJ2%C3%97%17%C3%A0%C2%AB).%C3%9A%14j%C3%B7%40%C2%92%C3%9C%26F%C2%9D%C2%98%C2%B2%C2%94X0%C2%86E%C2%84%C3%A8*%C2%A6_%C3%94%C3%B0v%C2%91%0F%C2%A2%C3%91%C3%8E%C2%B0%18%20%C3%B2%0C%C3%90%40%C2%8EeKA%3F%C3%BE%C2%8F%7CG9%7C%C2%92%C3%92%C3%9E0%C3%BC%C3%9B%5Eo7m%C3%9A6%1F%5C)%C2%A2%1B%C3%BE%C2%AB%C2%8A%C3%A4%C2%AEu%C2%9B%05n9%C2%A9%5E6%C3%BE%C3%9E%C3%B8%C3%B065z%C3%8D%C2%B2%C2%B5%C2%9CX%C2%BC%C3%AFK%C3%B2%C2%86%C3%BF%0F%C3%83j%C2%AF%5EH*%C3%B3~3l%C3%9D%C2%BB%C3%BD%C3%977%2B%C3%80%C2%80%C3%BF%00%C2%88%C2%8Bu%C3%AF%C3%82%C3%88%C3%B3%C2%9A%00%00%00%00IEND%C2%AEB%60%C2%82",
             explode:"%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00Q%00%00%00%0C%08%06%00%00%00%1A%C2%9FQ%1F%00%00%00%09pHYs%00%00%17%11%00%00%17%11%01%C3%8A%26%C3%B3%3F%00%00%03%3FIDATH%C2%89%C3%9DWAh%13A%14%C3%BD%5DbC%C3%88B%C3%93.%25MhLN%1EDHzI%0F%C2%82i%C3%A9%C2%AD%17%3Dx%C2%95%C3%86C%2F%05%C3%81%C2%83w%13%C3%B0%22%C2%B6%C3%98%5E%3Dh*x%12%C2%8B%C2%97%1CD%C3%90m%C3%A3%C3%85zp%C2%8B%17%0B%3Dl%0A%C2%B9%C2%88%C2%AC%C2%95f%C2%91%C3%AC%C2%92%C2%8CL%C3%B8%03%C3%A38%C2%B3%19%C3%91%5E%7C0%C3%AC%C3%AC%C3%AC%C3%BF%7F%C3%9E%C3%BF%C3%B3%C3%BF%C2%9Fd%C2%8C%10%02%C3%BF%23%C2%92%C3%89d%C3%B5B%22i%7D%C3%BC%C3%BAe%C3%A3%C2%AC%C3%9D3%00%C2%A0%04%00Dc%C2%94P%C3%A76'K%C3%A7%0C)%00pp%C2%9D%3E%0B%C2%B8%C3%96%18a%C2%9B%C3%89%02%3E%1D%C3%A1%7BIN%5D%C2%8D%C2%AB%C3%B9%C2%99%C3%83%C3%B7%0B%C3%A7%C2%9F%3C%26%C3%A6%C3%BA%C3%B5%C2%99%C3%9Cs%09o%C3%99h%08%C2%BE%C2%8C%C3%A2%C3%8DtR%40%08%C2%B1%09!U%7CFa%C2%93f-~_%20%C2%84%C2%B88%C2%AF%C3%A2zC%C3%90%C2%AD%C2%A1%1C%C2%B3%1F%05*S%40%C2%9D%C2%9A%60%C3%8BF%C3%BB%C3%92%C2%91%C3%8Df%C3%AFd%C2%B3%C3%99O%C3%A9t%C3%9A%C3%8Dd2o%2C%C3%8BZ%C2%BB%C2%98%C3%8F%04%5E%7B%C2%97to%C3%8D%C2%91%C3%95T%C3%BAT%C3%81%5B%06%C3%A6%C2%8B.oj%C2%AB%14%C3%83%C3%88%C3%97%00%20%C3%8F%C2%9DD%5B8%19%26%C3%83%C3%90%C3%A0%C3%A47%01%C2%A0%0A%00%15Ej%C2%94P%C2%86G%1Du%C2%98%C2%8D%0A%C2%97%C2%8DU%C2%81%C2%8B%12%C2%B9%5C%C3%AE%C2%9Di%C2%9A%C3%A5%C3%B9%C3%B9%C3%B9s%C2%A6i%C2%82%C3%A7y%C3%B9%C2%A3%C2%A3%C2%A3%C3%85b%C2%B1%08O_%7C%C2%80%C3%BE%C3%A17x%16%C2%9Cn%3C%C2%92%C3%B3%C2%A6%C3%98%05%00%17%00V8_%00%C3%97d%C2%BC%C2%B7%C3%B1%1B%C2%83M%2B%C3%87%C3%80%17-%C3%92%C2%889%C3%A1%7DB%12%C3%80-.%C3%A8%138x%C3%94%042%3C%C2%B4%C2%B8LOOoNNN%5E%5EZZ%1A%06%C2%90bjj%0A%C3%8A%C3%A52%C3%84%C3%A3q%C2%B8%C3%BF%60%C3%A3%C3%87%C3%96%C3%A7%C3%81%15%C3%9F%C3%B7%C3%B9%C3%83%17m%C3%9Bxhu%C2%8Ek%C2%81%C2%9B%C2%8B%C2%BC%C2%A5%C2%88)%C3%96%C3%A9fw%C2%85%C2%B5%14%C3%B6%15%077%16O%C2%95a%5B%C3%A8%C2%95g%02%C3%830n%C3%90%C2%80%C2%A90%18%0C%C2%82v%C2%BB%C3%9D%C3%BA%C3%87%7B%C2%AF%08%C3%AF4%0E%C3%97%0C%C2%85%C2%B0%0C%7Cy%C3%93%2C%3AQ%C3%889%1A%C2%B6HD%C3%B9k!%1E%C2%8F%1B%C3%A3%C3%A3%C3%A3J%C3%91%C3%99%C3%99%C3%99%C2%89d2%C2%B9%C3%B07%7Bh%C2%80f%C2%B2%C2%AB%0A%22%C3%AD%15c%C3%82%60%C3%81)%60%40%C2%8B%0A%C3%9D%C2%87xB%C2%BA%C3%B8%0E%007%C2%91%C2%906%C3%820TU%C3%91%10%C2%BD%5E%2F%C2%888h%1E%C3%94%1F%C3%9D%60%2F%0A1%C2%A1~%C2%9E%C2%A8%C2%88%C2%94%24N%C2%B1%C2%8D%5EF%04%C2%90%C2%81o%C3%902%C3%94%C2%B95Wr%C2%89Eq%C2%A1%C2%B2%0D%C3%830%5C%C3%8F%C3%B3.%C3%91%3E(%22%08%02%C3%A8t%3A%C2%81%C3%AF%C3%BB%C2%A3%C2%AAbX%C2%8E%1A%C3%BE%C3%B0~%C3%B1%073%C3%A4%C2%A2%0A%C2%A2%C3%AC%C2%B2%C2%B01%C2%90%C3%A2%C2%86%07%C3%98%03%C3%9F%0A%C3%BA%C2%85%C2%88%20%C3%96%14%C3%AB%3A%5C%C3%A8%C3%9C%C2%8D%C3%85bk%7B%7B%7B%C2%AF%C2%96%C2%97%C2%97%13%7CY%C3%93%00%C2%B6Z%C2%AD0%C2%91H%C3%94%C2%A5%C3%96~E%C3%BE%0F%2FU%C3%91%C3%B7%0A%2Bg%C2%9D%1E%06%C2%9C%C3%9C%01%C2%B7F%C3%A7%2CS%C3%A6%C2%B04%01%C2%9F%C2%ACo%C2%B6%05%3B%C3%A2%3B%0F%C2%97%C2%B3%C2%A1%02%C3%95%3F%C2%A1%C2%97F%C2%BF%C3%9F_%C3%9D%C3%99%C3%99%C3%A9%C3%AE%C3%AF%C3%AF%C3%83%C3%B1%C3%B118%C2%8E%03%C3%8Df%C2%B3%1B%C2%86%C3%A1%C2%BDN%C2%A7%C2%B3.%C3%A8%1F%C2%8C%C2%B0%0B%C3%9C%C2%AF%0A%19o%19%C2%86%5C%C3%98%C3%9F%3E%C2%9D%C3%8C%602%05%C2%AE%C3%A7%C3%91t%C3%A6%C2%B3%C2%8D%C2%AE%C2%B3%0Cd%25J%C2%B3%C2%97%C3%AF94%C3%A0Q%C3%BD%C2%8F%C3%99P%C3%A17%7Dz%C2%81X%C2%96U%C3%AD%C3%B5z%C2%AF%C2%BB%C3%9Dn%C3%93%C3%B7%7DY%2F%C3%A4y%C2%8F%C3%B2Q%C3%86%5B%06%1B%00%C3%AC%C2%9F%02%26%1BKo%C2%A7)X%00%00%00%00IEND%C2%AEB%60%C2%82",
             color:"%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00O%00%00%00%15%08%06%00%00%00%07!%C2%B3%17%00%00%00%09pHYs%00%00%17%11%00%00%17%11%01%C3%8A%26%C3%B3%3F%00%00%01%C3%A1IDATX%C2%85%C3%AD%C2%98%C3%ADm%C3%820%10%C2%86_W%5D%C2%80%C2%8E%C2%80%C2%94%09%C3%92%0D%08%23t%C2%85%C3%8A%C2%99%00F%C2%80%09%1C%C2%B1BG%C3%80%19!%13D%C3%AA%080%C2%82%2B%1B%C2%BB%C2%98%C3%86%06%7F%04%C2%A9%3F%C3%BCH%C2%88%C2%90%C3%9C%C3%B9%C2%927w%3E%1B%22%C2%84%40!%C2%8D%C2%97%C2%A2%5B%3AE%C2%BC%0C%5E%C2%9D%C2%AE%2B%C2%B2%01%C2%B0%0B%18v%C2%8B%5E%C3%ACo%C3%8E%C3%90%20_%C2%8EN%C2%AC%C3%AD%13'L%C3%BC%C3%B8%1Bnm%0Clj%C3%AB%C2%8D%C3%93Zc%10%C2%8C%C2%B1s%C3%94V%C2%A0%C3%9A%C3%BB.N3%C3%AF%22%5C%138x%C2%A3%C3%AD%2F%C3%90%60%C3%9F%C2%A5%C2%B2%C2%A5d%C2%89%C2%ABpA1Y%C2%84%C2%AD%C2%8C%23%C3%AD%19.q%12h%08%C3%86%C2%8D%C3%8Fm%C3%9A0V%24%C2%BE%C2%83%C3%B4%C2%82%C2%A8o%1A%C3%AD%C2%BBF'%C3%B8%09N%3Fg%C3%A61%C2%B7%C3%AD%C3%838-%04%C3%B7d%C3%9E%19%C3%80%C2%A0_%C3%88%C2%B7%C3%BE%5D%C3%9B%06%02%15q%0DZ%C3%A6%3C%60%10%C2%A8%C3%8CK%3A%C2%A8%C2%A9(%C2%90g%C2%8Bgn%C3%A4%C2%A0%C2%B2%C3%ACy1%C3%AC%C2%87O%C2%8D%23%C3%BD%C2%BEb%1C%C3%9C%0Dc%C2%8AI%C3%ADX%06%C3%95%1C%C3%A4w'8%C2%A83%C3%BBs%19dI2%10n%1D%C3%87%0C%C2%B9%20%18%1B%C2%81J%C2%96%C3%B5%C3%B2o%C3%89%C3%8E!%C3%9E%C2%80%C3%9E%C3%9D%C3%B9%1E%C3%92%25%C3%BAE%C3%92z%3As%00R%C2%AC%C2%A3j%C3%86%C3%80G%60%17W%C2%84%C2%8A%C2%97%C2%8A%C2%BC%C2%91wP%C3%B2%C2%A9o%2C%C3%AA%C2%A1N%20G%C3%BB%C2%84g%C3%A9%C2%B2c%20g)%1ECR%1C%05%C3%81xT%C2%AB%C2%80%08B%C3%85%5B%60E%C3%BC%C3%8B%C2%83%5Ep%C3%8F%C2%95%1AT%C3%B9%C3%95%11%C3%8B%C2%8Bk%C3%8C0%1FUf%0C%C3%89q%0C%C3%86%2Fx%C2%8A%0A%15%C3%8F%C2%A4%C2%B6%C2%8F%7B%C2%93%C3%8C%3D%C2%BF9%C2%99%2B%C2%8E%C3%9D%7D%C3%AF%C3%B2%C3%AC%C2%B2%C3%BD%C3%AF%C2%98%C3%95%C2%80%3D%C3%8F%C3%95%C2%BA%C2%84%7F%C3%B1%C2%89%C2%99%2B%1E%C3%97%1F%C3%83V%C2%A7%7Fj%C3%A9%C2%840g%C2%8CA%2F%C2%8C%0DM%C3%8C%C3%98%C2%B9%C3%AB%3C~%C2%B3%C2%B7%C3%AD%C3%94%C2%B1o%C3%BE%C2%9B%C2%85%16%C3%B3%C3%86%10%C2%A8%C2%BE%C3%A5%C3%BEU%C3%AFa%C2%A3%C3%86-%C3%BF%C3%A7eP%C2%B6g%19%14%C3%B12(%C3%A2eP%C3%84K%05%C3%80%0F~%C3%A2%C2%92%06%C3%AFU!H%00%00%00%00IEND%C2%AEB%60%C2%82",
-            smartxy:"%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00Q%00%00%00%1A%08%06%00%00%00%C3%8F%10%C2%B0%C2%99%00%00%00%09pHYs%00%00%17%11%00%00%17%11%01%C3%8A%26%C3%B3%3F%00%00%02AIDATh%C2%81%C3%AD%C2%99%C3%91m%C2%830%10%C2%86%2FQ%16%C3%B0%0At%04%3A%02%C2%8C%406h%3A%02%3C%C3%B4%C2%B1%0F%C3%89%08%C3%A9%08%C3%89%08%C3%89%08a%C2%85%C2%A8%1B0%C2%82%2BK%C2%BF%C2%AB%C3%AB%C3%95%C2%80%0Dn%C3%94(%C3%BE%C2%A4%C2%93%C3%80%C3%98%C3%A6%C3%B8%C2%B9%3B%C2%9Bd%C2%A1%C2%B5%C2%A6%C3%84%3C%C2%96I%C2%BF%C3%B9%24%11%23%C2%90D%C2%8C%40%121%02%C2%8F.%C2%A2%22%C2%A2l%C3%AE%24%C2%8F.bAD%5B%C2%88i1%C2%A2V0%2F%1E%5DD%C2%82X%7B%C2%88%C2%97%C3%A1%C3%B8%40D%C2%B9%C3%B7%0CZ%C3%ABB%C3%BBs2%C3%BBJ%C3%B4.p%C3%9Cg5%C3%BA%0D%C3%B5%C3%A1V%C2%B0y%C3%AB%00%C2%9F%C3%AA%C2%89%C3%8F%60Li%C2%AD%0Fh%C2%BF%C3%80%C3%AC%C2%9C%C2%BE~%C3%93j%C3%A6%1B4o%C3%AE%C3%83qm%C2%83T%C3%B1%C2%A5%08I%C2%9F%C2%88tD%C2%B4%26%C2%A2%0B%C2%8B%C2%BC%1D%C3%8C%1B)%C3%A2%15%C3%96G%2B%C2%842%C3%A7%C2%A6%C3%BF%19m%0A%C3%8El%02%C3%92%C3%81%0A%C2%B8am%1D%C2%9B%C3%93%C2%85%12%C3%B3%C3%8B%C3%BE%C3%BC%C2%BA%7C%C2%A6V%C3%8CW%C2%89%C2%9A%C2%98%238%C2%86t%C3%B8%C2%89H%05%C3%9F0%C2%96%C3%98vWZ%C2%85%C3%8E5V%26%7C%7C%C3%B6%7D%C2%A6%0C%C3%A9%C2%AD%C2%91%C3%96%07v%C3%8C%C3%BBU%C2%B0%C3%8C'%C2%9D%C3%87%C3%92%C3%90%C2%BC%C3%85%C3%86%C3%91~b%11%C3%A0K%C2%8E%C2%95%C3%91%C3%85f%24%C2%BDC%C3%AE3%C2%84%5D%40%1AQ%C2%96lt%C2%9A%08%C2%AF%C3%A1%C3%A7%19%7D~E%C2%A8%141%C2%9B%C2%B8o%0A%C2%A9%7F%C3%84%C3%92%C2%BDo%C2%9C%C2%9A0%C3%A7%14J%C2%8C%C3%A9%C3%98%C3%985Vh%2B%60%C2%8D%C3%A0y%C3%ADK%C3%B19%0B%C3%8B%1C%C2%AA%1B%C2%894F%C3%97s%C2%BDa%11h%04%7C%1F%C2%AA%C2%91K%C2%84%C3%A9b%C3%84%C3%BA%C2%B0c-%C3%B6%7ChQ%C3%90B%C3%80EO%C2%89%C2%B0%C2%94%C2%8E%C3%AB%C3%9C%C3%A7%C2%A0%C2%95%C3%94%C2%93%3DK%C3%A1%17%22z%13%19%C2%AA%C3%98%C2%86%5C%C2%ADFj%C2%93%2F%C2%AE%C2%B4%C2%90%C3%88%3A%C3%97W_%5D%1C%C3%91%C3%9F%C3%96%C3%9E%1C%C3%87%C2%A5%C3%A7%C3%B8%10j%C3%B8yE%0D%C3%BC%C3%84%C3%BD%C3%B68%3F%C3%A2%C2%B8%C2%B2~%C2%AD%22%C3%95%C2%9F%C2%A1%C3%88%238%C3%81k%60%C2%8B1c%C3%A3%2CW%C2%B6%C2%95%C3%8A%C2%99%C3%8F%C2%85%C3%87%C2%B6%2C%04%5E%03%1B%C3%A6_%C2%83%40%C3%8Bp%3D%C2%87%C2%80%C2%A6Nv%C2%B7%C3%BA%C3%AC%C3%9B%C2%8A%7D%60%13%10%C2%85%C2%9CR%C3%AC%C3%B3N%C2%917%C3%A9%C2%A64%3C%11%C3%91%C2%B3x%C3%81%3B%C3%A6o%C2%8E%C2%88%5C%7Fg%5E%C3%88%C3%A7%C3%8D%3F%C2%B2)%7B%C3%9B%18%C2%B6%C3%85%3D%15%C2%9F%C3%AB%5E%7F%C2%80h%C3%BF%C2%A8%1EN%C3%A2%5EE%C3%ACXM%1DZ%C3%8CnB%C3%BA%C2%B7%2F%1C%25_%5C%121%02%C3%A9G%C3%99%08%24%11%C3%A7BD_L%C3%93%C2%904%20wS%C2%B8%00%00%00%00IEND%C2%AEB%60%C2%82"
+            smartsepxy:"%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00Q%00%00%00%1A%08%06%00%00%00%C3%8F%10%C2%B0%C2%99%00%00%00%09pHYs%00%00%17%11%00%00%17%11%01%C3%8A%26%C3%B3%3F%00%00%02AIDATh%C2%81%C3%AD%C2%99%C3%91m%C2%830%10%C2%86%2FQ%16%C3%B0%0At%04%3A%02%C2%8C%406h%3A%02%3C%C3%B4%C2%B1%0F%C3%89%08%C3%A9%08%C3%89%08%C3%89%08a%C2%85%C2%A8%1B0%C2%82%2BK%C2%BF%C2%AB%C3%AB%C3%95%C2%80%0Dn%C3%94(%C3%BE%C2%A4%C2%93%C3%80%C3%98%C3%A6%C3%B8%C2%B9%3B%C2%9Bd%C2%A1%C2%B5%C2%A6%C3%84%3C%C2%96I%C2%BF%C3%B9%24%11%23%C2%90D%C2%8C%40%121%02%C2%8F.%C2%A2%22%C2%A2l%C3%AE%24%C2%8F.bAD%5B%C2%88i1%C2%A2V0%2F%1E%5DD%C2%82X%7B%C2%88%C2%97%C3%A1%C3%B8%40D%C2%B9%C3%B7%0CZ%C3%ABB%C3%BBs2%C3%BBJ%C3%B4.p%C3%9Cg5%C3%BA%0D%C3%B5%C3%A1V%C2%B0y%C3%AB%00%C2%9F%C3%AA%C2%89%C3%8F%60Li%C2%AD%0Fh%C2%BF%C3%80%C3%AC%C2%9C%C2%BE~%C3%93j%C3%A6%1B4o%C3%AE%C3%83qm%C2%83T%C3%B1%C2%A5%08I%C2%9F%C2%88tD%C2%B4%26%C2%A2%0B%C2%8B%C2%BC%1D%C3%8C%1B)%C3%A2%15%C3%96G%2B%C2%842%C3%A7%C2%A6%C3%BF%19m%0A%C3%8El%02%C3%92%C3%81%0A%C2%B8am%1D%C2%9B%C3%93%C2%85%12%C3%B3%C3%8B%C3%BE%C3%BC%C2%BA%7C%C2%A6V%C3%8CW%C2%89%C2%9A%C2%98%238%C2%86t%C3%B8%C2%89H%05%C3%9F0%C2%96%C3%98vWZ%C2%85%C3%8E5V%26%7C%7C%C3%B6%7D%C2%A6%0C%C3%A9%C2%AD%C2%91%C3%96%07v%C3%8C%C3%BBU%C2%B0%C3%8C'%C2%9D%C3%87%C3%92%C3%90%C2%BC%C3%85%C3%86%C3%91~b%11%C3%A0K%C2%8E%C2%95%C3%91%C3%85f%24%C2%BDC%C3%AE3%C2%84%5D%40%1AQ%C2%96lt%C2%9A%08%C2%AF%C3%A1%C3%A7%19%7D~E%C2%A8%141%C2%9B%C2%B8o%0A%C2%A9%7F%C3%84%C3%92%C2%BDo%C2%9C%C2%9A0%C3%A7%14J%C2%8C%C3%A9%C3%98%C3%985Vh%2B%60%C2%8D%C3%A0y%C3%ADK%C3%B19%0B%C3%8B%1C%C2%AA%1B%C2%894F%C3%97s%C2%BDa%11h%04%7C%1F%C2%AA%C2%91K%C2%84%C3%A9b%C3%84%C3%BA%C2%B0c-%C3%B6%7ChQ%C3%90B%C3%80EO%C2%89%C2%B0%C2%94%C2%8E%C3%AB%C3%9C%C3%A7%C2%A0%C2%95%C3%94%C2%93%3DK%C3%A1%17%22z%13%19%C2%AA%C3%98%C2%86%5C%C2%ADFj%C2%93%2F%C2%AE%C2%B4%C2%90%C3%88%3A%C3%97W_%5D%1C%C3%91%C3%9F%C3%96%C3%9E%1C%C3%87%C2%A5%C3%A7%C3%B8%10j%C3%B8yE%0D%C3%BC%C3%84%C3%BD%C3%B68%3F%C3%A2%C2%B8%C2%B2~%C2%AD%22%C3%95%C2%9F%C2%A1%C3%88%238%C3%81k%60%C2%8B1c%C3%A3%2CW%C2%B6%C2%95%C3%8A%C2%99%C3%8F%C2%85%C3%87%C2%B6%2C%04%5E%03%1B%C3%A6_%C2%83%40%C3%8Bp%3D%C2%87%C2%80%C2%A6Nv%C2%B7%C3%BA%C3%AC%C3%9B%C2%8A%7D%60%13%10%C2%85%C2%9CR%C3%AC%C3%B3N%C2%917%C3%A9%C2%A64%3C%11%C3%91%C2%B3x%C3%81%3B%C3%A6o%C2%8E%C2%88%5C%7Fg%5E%C3%88%C3%A7%C3%8D%3F%C2%B2)%7B%C3%9B%18%C2%B6%C3%85%3D%15%C2%9F%C3%AB%5E%7F%C2%80h%C3%BF%C2%A8%1EN%C3%A2%5EE%C3%ACXM%1DZ%C3%8CnB%C3%BA%C2%B7%2F%1C%25_%5C%121%02%C3%A9G%C3%99%08%24%11%C3%A7BD_L%C3%93%C2%904%20wS%C2%B8%00%00%00%00IEND%C2%AEB%60%C2%82"
             }
         };
 
@@ -180,7 +180,7 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             app.activeViewer.setActive();
             };
 
-/*         var iconButtSort_imgString = strings.imgStrings.sort;
+    /*  var iconButtSort_imgString = strings.imgStrings.sort;
         var iconButtSort = col1Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
             iconButtSort.helpTip = strings.helpTips.sort;
             iconButtSort.onClick = function() {
@@ -240,10 +240,10 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             app.activeViewer.setActive();
         };
 
-        var iconButtSmartXY_imgString = strings.imgStrings.smartxy;
-        var iconButtSmartXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartXY_imgString), {name: "iconButtSmartXY", style: "toolbutton"});
-            iconButtSmartXY.helpTip = strings.helpTips.smartxy;
-            iconButtSmartXY.onClick = function() {
+        var iconButtSmartSepXY_imgString = strings.imgStrings.smartsepxy;
+        var iconButtSmartSepXY = col2Butts.add("iconbutton", undefined, File.decode(iconButtSmartSepXY_imgString), {name: "iconButtSmartSepXY", style: "toolbutton"});
+            iconButtSmartSepXY.helpTip = strings.helpTips.smartsepxy;
+            iconButtSmartSepXY.onClick = function() {
             separateDimensionsPreserveEasing();
             app.activeViewer.setActive();
         };
@@ -1429,63 +1429,45 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
 
 //#region flip horizontal
     function flipHorizontal() {
-        var comp = app.project.activeItem;
-        var layer = comp.selectedLayers[0];
-        var prevParent = layer.parent;
-
         app.beginUndoGroup("Flip Horizontal");
+        var mainComp = app.project.activeItem;
+        var theLayers = app.project.activeItem.selectedLayers;
+        for (var num = 0; num < theLayers.length; num += 1) {
+            var theLayer = theLayers[num];
+            var oldParent = theLayer.parent;
 
-        // Create null and set its position to layer's anchor point
-        var nullLayer = comp.layers.addNull();
-        nullLayer.position.setValue(layer.transform.anchorPoint.value);
+            var nullLayer = mainComp.layers.addNull();
+            nullLayer.position.setValue(theLayer.transform.anchorPoint.value);
+            theLayer.parent = nullLayer;
+            nullLayer.scale.setValue([-100, 100]);
 
-        // Parent the layer to the null
-        layer.parent = nullLayer;
-
-        // Flip the null horizontally
-        nullLayer.scale.setValue([nullLayer.scale.value[0] * -1, nullLayer.scale.value[1], nullLayer.scale.value[2]]);
-
-        // Wait for the current frame to be rendered
-        app.scheduleTask('unparentAndRemoveNull()', 1, false);
-
-        function unparentAndRemoveNull() {
-            // Unparent the layer
-            layer.parent = prevParent;
-            // Remove the null
+            // Unparent the layer and remove the null
+            theLayer.parent = oldParent;
             nullLayer.remove();
-            app.endUndoGroup();
         }
+        app.endUndoGroup();
     }
 //#endregion flip horizontal
 
 //#region flip vertical
     function flipVertical() {
-        var comp = app.project.activeItem;
-        var layer = comp.selectedLayers[0];
-        var prevParent = layer.parent;
-
         app.beginUndoGroup("Flip Vertical");
+        var mainComp = app.project.activeItem;
+        var theLayers = app.project.activeItem.selectedLayers;
+        for (var num = 0; num < theLayers.length; num += 1) {
+            var theLayer = theLayers[num];
+            var oldParent = theLayer.parent;
 
-        // Create null and set its position to layer's anchor point
-        var nullLayer = comp.layers.addNull();
-        nullLayer.position.setValue(layer.transform.anchorPoint.value);
+            var nullLayer = mainComp.layers.addNull();
+            nullLayer.position.setValue(theLayer.transform.anchorPoint.value);
+            theLayer.parent = nullLayer;
+            nullLayer.scale.setValue([100, -100]);
 
-        // Parent the layer to the null
-        layer.parent = nullLayer;
-
-        // Flip the null vertically
-        nullLayer.scale.setValue([nullLayer.scale.value[0], nullLayer.scale.value[1] * -1, nullLayer.scale.value[2]]);
-
-        // Wait for the current frame to be rendered
-        app.scheduleTask('unparentAndRemoveNull()', 1, false);
-
-        function unparentAndRemoveNull() {
-            // Unparent the layer
-            layer.parent = prevParent;
-            // Remove the null
+            // Unparent the layer and remove the null
+            theLayer.parent = oldParent;
             nullLayer.remove();
-            app.endUndoGroup();
         }
+        app.endUndoGroup();
     }
 //#endregion flip vertical
 
