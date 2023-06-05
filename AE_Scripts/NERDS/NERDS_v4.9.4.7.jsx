@@ -34,25 +34,24 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             // housekeeping menu help ? button strings:
             HousekeepingSort: "Sorts project items (yes this function lives in five different places lol).",
             HousekeepingReduce: "Reduces project to only files used by selected comp (the one you select in the project panel).",
-            HKclct: "Collects all project files and prompts you to save them to a new project folder somewhere.",
-            HKrctfn: "Renames active composition to file name, instead of leaving it 'Comp 1' or something silly.",
-            HKcrq: "Clears render queue of all past/present/future renders. Handy when collecting files into fresh project.",
-            HKpamdc: "Purges all memory and disk cache so you keeeeep on ram previewin'.",
+            HousekeepingCollect: "Collects all project files and prompts you to save them to a new project folder somewhere.",
+            HousekeepingRenameCompToFile: "Renames active composition to file name, instead of leaving it 'Comp 1' or something silly.",
+            HousekeepingClearRenderQueue: "Clears render queue of all past/present/future renders. Handy when collecting files into fresh project.",
+            HousekeepingPurgeAll: "Purges all memory and disk cache so you keeeeep on ram previewin'.",
             // utilities menu help ? button strings:
-            Ucdkf: "Calculates the difference in values between two keyframes.",
-            Ucd2l: "Calculate the distance (in position) between two layers.",
-            Upi: "Select one or more layers, this will pre-compose each layer individually.",
-            Urp: "Round position values so there are no subpixels.",
-            Usac: "Selects all children of selected layer (handy for finding all children of a particular null).",
-            Usaul: "Selects all unparented layers.",
-            Usann: "Selects all non-null layers (kind of the opposite of the above one).",
-            Ulan: "Locks only null layers in the comp.",
-            Uun: "Unlocks all null layers in the comp.",
-            Ulal: "Locks all layers in the comp.",
-            Uual: "Unlocks all layers in the comp.",
-            Uscc: "Scales the composition by changing the h/w, and automatically scales every layer inside the comp proportionally.",
-            Useb: "Applies an adjustment layer with 'edge blur' effect.",
-            Usp: "Applies an adjustment layer with a pixelation effect."
+            UtilitiesCalcDiff: "Calculates the difference in values between two keyframes.",
+            UtilitiesDistBtwnTwo: "Calculate the distance (in position) between two layers.",
+            UtilitiesPrecompIndividually: "Select one or more layers, this will pre-compose each layer individually.",
+            UtilitiesRoundPosition: "Round position values so there are no subpixels.",
+            UtilitiesSelectChildren: "Selects all children of selected layer (handy for finding all children of a particular null).",
+            UtilitiesSelectUnparented: "Selects all unparented layers.",
+            UtilitiesSelectNonNulls: "Selects all non-null layers (kind of the opposite of the above one).",
+            UtilitiesLockNulls: "Locks only null layers in the comp.",
+            UtilitiesUnlockNulls: "Unlocks all null layers in the comp.",
+            UtilitiesLockAllLayers: "Locks all layers in the comp.",
+            UtilitiesUnlockAllLayers: "Unlocks all layers in the comp.",
+            UtilitiesScaleComp: "Scales the composition by changing the h/w, and automatically scales every layer inside the comp proportionally.",
+            UtilitiesPixelation: "Applies an adjustment layer with a pixelation effect."
             },
         imgStrings: {
             loop:"%C2%89PNG%0D%0A%1A%0A%00%00%00%0DIHDR%00%00%00S%00%00%00%19%08%06%00%00%00Mq%12%0A%00%00%00%09pHYs%00%00%17%11%00%00%17%11%01%C3%8A%26%C3%B3%3F%00%00%05%C2%A8IDATh%C2%81%C3%ADY_LSW%18%3F%C3%B7%C3%9E%C3%9ER(%C2%A5%C2%B5%C2%A5%26%C2%94L%C2%A4%C2%A15%0Dn%C3%92uuKcV%1F%C3%84-qS%18%C2%A0fq%24%C3%8E%C3%88%C3%9E%C3%A6%C3%A2K%C3%8D4%C3%8C%C3%B84%C3%87%C3%8B%C3%B4E%C3%8A%C3%A6%C2%83%01%13%19%C3%81%07%C3%A6%13B%20%25%03Y%C2%B6%C3%B2'vd5-Ul%C2%ABbiQ%C3%9A%C3%9B%3F%C2%B7%3D%C3%8Ba%5Cw%C2%B9%C3%9CvM%C2%ADn%C2%A6%C3%BE%C2%92%C2%93%C2%9C%C3%B6%3B%C2%BF%C3%AF%C2%9C%C3%B3%C3%AB%C3%B9%C3%AE%C3%BD%C2%BES%0CB%08%0A%088%00%40%C2%90%C3%A7%C3%AD%C2%A6%00%004x%01%C2%8E_I8%1C%0Ep%C3%A5J%C2%B7.%10X%C2%94%C3%B2%C2%AD%1F%C3%87q%C2%BA%C2%A1%C2%A1%C3%81%C2%B1o%C3%9F%3E*%C3%93%C3%BE%0A%C3%BEdz%C2%BD%5E%C2%91%C3%99l%C3%AE%C2%B8%7F%C3%BF%C3%BE%C2%A7%C3%85%C3%85%C3%85%04%C2%86a%1BH4M%C3%83D%22%C3%A1%C2%B4Z%C2%AD%C2%9F%C2%B5%C2%B6%C2%B6%3A9%C3%A6g'%C2%B3%C3%A0%C3%85%3C%7F%C2%BE%C2%A3%C3%A9%C3%8C%C2%99%C2%AF%C2%BB%C3%AB%C3%AA%C3%AA%C3%A6%05%02%C3%81%0A%1F%09%C3%830%C3%82%C3%A5r%C2%A9%C2%95J%C3%A5%C3%88%C3%AD%C3%9B%C2%B7%C2%9B8%C3%A6%C3%97a%C3%8E%20%1C~%C2%AA%2B**%C2%8A%C2%91%24%C3%B9%18%C2%9DJ%C2%81%40%00%C2%85B!D%7D%C2%9A%C2%A6%C2%B1x%3C%C2%8E%C2%A5R)%20%16%C2%8B%17%C2%97%C2%96%C2%96%C3%B4%C2%99%7C1bZ%00%00%C3%9Frl%1B%C3%8F%C3%BB%3F%C3%A0%1B%C2%9F%0E%5C%3F%C2%B9rs%09%C2%A1L%7B%00%C3%A1p%18%C3%98%C3%ADv1%C2%86aP.%C2%97%C3%93%1A%C2%8D%06%C2%AF%C2%AA%C2%AA%C2%92%C2%89%C3%85%C3%A2%224_4%1A%C2%A5%7C%3E%C3%9Fc%C2%B7%C3%9B%0D%C2%97%C2%96%C2%96R%C2%8B%C2%8B%C2%8B%C2%A4%C3%83%C3%A1%C3%80kkkS%C2%BC%0E!%C2%84%16%08%C3%A1M%C2%B8%11%20MK7%3E%1D%C3%90%C3%B8%3D%C3%B0%C3%B9%C2%B9%C2%B9%C2%80%C3%8DG%0D%C2%87%10%0AQ%C2%8BD%22%C3%82%C2%A3G%C2%8F~%2C%12%C2%89%C2%9E455%C3%B9%C2%BB%C2%BB%C2%BB%C3%BD%13%13%13%C3%90%C3%A3%C3%B1%20%C3%A1%60(%14%C2%82~%C2%BF%1F%C3%8E%C3%8E%C3%8E%C3%82%C2%BE%C2%BE%C2%BE%C2%85%13'N%C3%9CR%C2%A9TQ%C2%B5Z%C3%BD%C2%A3%C3%87%C3%A3%C2%912~%20%C2%84%02%C3%86%7F%C2%A6E%C2%A6%133%C3%97M%C3%BD%17%5C%C3%B6%C3%9C%C3%AB%C3%84%C2%B4Z%C2%AD%C3%AF%C2%90%24%C3%B9%C3%A8%C3%88%C2%91%23%C3%BE%C2%81%C2%81%C2%81%C2%98%C3%97%C3%AB%C2%85%C3%A1p%C2%98%C2%B7!a%C3%87%C3%86%C3%86%C2%A2%C2%A7O%C2%9F%1EW(%14%C2%B1%C3%9D%C2%BBw%C2%B7%C3%B3%C2%89%C2%89%C3%A7%10%3A%C3%BF'%0C%C2%B1B%C3%B9%C3%94%C2%BF%C2%855%C2%83%C2%95%C2%95%15%C2%AC%C2%BD%C2%BD%C3%BD%3B%C2%BD%5EO677%C3%8B%C2%8CF%C2%A3P%26%C2%93%C2%B1%C2%A3%15%3Cx%C3%B0%C3%A0%C3%99g%C2%92%24A%5D%5D%5D%C3%91%C3%9E%C2%BD%7Bw%1C8p%60z%7C%7C%C3%9Cr%C3%AD%C3%9A5-%C3%97o%3E%C3%84%1CZ%C3%9B%08%C2%B7%C3%BF%C2%A2%C2%B9%C3%9C5%04%C2%B3%1D%C3%9C%C3%9B%C3%9Bk%5C%5E%5E~%C2%BF%C2%B1%C2%B11%C2%A6%C3%91hDeee%C3%AB%C3%ACH%C3%8C%C2%85%C2%85%C2%85u%C3%9F%C3%A18%0E%C2%B6o%C3%9F%5Eb2%C2%99J%C2%AB%C2%AB%C2%AB%C2%9Fvu%C3%BDp%C2%92%C3%AB7_b%C2%9E%C3%A7%C3%A9%C2%BFh.%1B%C3%B5%00%C2%80%C2%AEl%07%0F%0E%0E6%C2%ABT%C2%AA%C2%A0V%C2%ABUTVVf%3D%C2%89H%24%02%3A%C2%9DNS%5B%5B%7Bgr%C3%B2%C3%96%C2%9E%C2%9E%C2%9E%C2%9E-l%7B%3E%C3%83%1Cm%C2%A8%C3%AF%25s%C3%95k%C3%99%01%C3%82%1EV%3F-b%C2%B1%18677%C2%B7%C2%B3%C2%A6%C2%A6%26*%C2%95J%05(%C2%84%C2%B9%C3%80b%14P%C3%85ySN%C2%A0T*I%C2%BD%5E%1F%C3%91%C3%AB%C3%B5%C2%A5%16%C2%8B%C3%85%C3%8A%C2%B6%C3%A5CL%C3%B5%C3%9AF%C2%86X%C2%9Bz%19%5Cfn%26%C3%8D2d%C2%93rE%C2%A3%C3%91%C2%92h4*%2F--%C3%85%C3%85b1%C3%AF%18%C3%B8%C2%9B%0DT%C3%9C%C2%99%02%C2%80Nl%C2%B0%C2%95%C2%94%C2%94%00%C2%B9%5C%1E2%C2%9B%C3%8D%C2%97%7D%3E%C2%9F%C2%99%C3%BD%C2%9C%C3%8E%24%26%C3%A4%C2%B4t%C2%BFz%1B%00%C3%A0%C3%A6Z%C2%BF%C2%85%C3%95%C3%8F%06%C3%8F%C3%83%C3%A5%C2%AE5%C2%AB%C3%9CU(%14%C2%A6D%22Q*%1E%C2%8F'h%C2%9A%C3%9E%60%C2%A7(%0A%C2%B8%091%20v%7D%08%00%C2%B1%C2%B1%C2%A6I%24%12%60yy9i%C2%B3%C3%99%24%15%15%15%C3%AB%C3%94%C3%8Eg%05d%C3%89%C3%A1d%C3%A5%C2%83%C3%8B%C2%87!%C3%96i%C3%BF%C2%9Dm%2F..%C2%A6%C2%B6m%C3%9B%C3%B6%C3%90%C3%A1pl%09%C2%85B%C2%AB%2F%1B%C2%A6%1EGB%C2%A2K%C2%8F%C2%B7%C3%9F%C3%9B%05%20%C3%8E%7F%C3%8E%10gvvVl%C2%B7%C3%9B%1B%3B%3B%3B%C3%BB%C3%99%C3%85D%3E%C3%85%C3%8C%C2%B6%C2%AA%C3%897%C2%97%0F%19_f%C3%B5%C3%B5%1F%C3%BCr%C3%A3%C3%86%C2%8D%1D%5E%C2%AF%C3%B7Q%20%10%C3%98%5C%5E%5E%C2%BE%C3%BA%7D0%18%04%06%C2%83%01%C3%B0%5Dv%20%C2%A0%C2%B2%C3%92%C3%A5r%C3%B9%C2%A6%C2%A7%C2%A7%C2%95%3Bw%C2%BE%C3%AB9%7C%C3%B8%C3%B0Wl%C3%BB%C2%AB%C2%9Cg2y%25_%C3%8B%C2%98%15%1C%3A%C3%94%C3%92%2B%C2%95JK%C2%AF_%C2%BF%C3%BE%C3%90%C3%A5r%01%26%C3%9CU*UZ!%11%C3%AE%C3%9E%C2%BD%0Bl6%C3%9B%C2%94%C3%9B%C3%AD%C3%96%C2%B5%C2%B5%C2%B5%0D%C2%90%24%C3%B9%C2%84m%C3%8FE%C3%8CS%C2%AC%10z%C2%99%C3%9C%C2%BCA*%C2%95%C3%BE%C3%99%C3%9E%C3%BE%C3%8DO%23%23%23%5B%07%07%07%1D(%C2%B4%C2%93%C3%89dF%C3%B7~%C2%BF%1F%C2%8C%C2%8E%C2%8E%C3%BEz%C3%B5%C3%AA%C3%95J%C2%93%C3%89D%1F%3C%C3%98%C3%B2%3DwL.a%C3%8E%C3%BC%C3%AA%C2%B9%3C%C3%A3%C2%9E%C2%87%C2%9BW%1C%3B%C3%B6%C3%B9%C2%99%C2%A9)%C2%BB%C3%A1%C3%82%C2%85%0BR%C2%8A%C2%A2f(%C2%8AzS%C2%ADV%C3%A3%0A%C2%85%02%10%04%C2%B1%3A%15z%C2%9E%C2%A2%C3%8B%C2%90%7B%C3%B7%C3%AE%C2%A5%C2%86%C2%87%C2%87'%2F%5E%C2%BC%C2%98%C3%98%C2%B4i%C3%93%5B%C2%97.u~A%10D%C2%80%C2%BB%C2%9E%C2%82%C2%BE%C3%8F%C2%8CDb%C2%BA%C2%96%C2%96O~%C2%B6%C3%99l%C3%A4%C3%BE%C3%BD%C3%BB'%0D%06C%C2%B5V%C2%AB%C3%9D*%C2%93%C3%89%24(%C3%9C%C3%83%C3%A1%C3%B0S%C2%A7%C3%939%3F33%C3%B3%C3%87%C3%98%C3%98X%C2%95%C3%97%C3%AB5%C3%9A%C3%ADS'5%C2%9A%C2%9A%C3%8B%00%00%C3%A6(%C2%BF%C2%BE%C3%8F%04%C2%AB9c%C3%91%C2%9C%C3%91h%C3%AC%19%1E%1E%C3%BE%C3%92%C3%ADvo%C2%9E%C2%9F%C2%9F%7FL%C2%92%C2%A4%13%C3%9Do%221%13%C2%89%04%1E%C2%8F%C3%87e%C3%89d%C3%B2%C2%8DH%24R!%C2%97%C3%8B%03%1AMM%C3%9AJ%C2%AB%C3%A0%2F%C2%87%C3%AB%C3%AB%C3%AB%C2%9D%1D%1D%1D%22%C2%97%C3%8B%25%C2%93H%24%C2%A8%1C*%C3%A3%C2%8E%C2%A1i%C2%9A%C3%B0%C3%BB%C3%BD%C2%8A%C3%A3%C3%87%C2%8FOg%C3%B2U%C3%B0%7F%5B%C3%904-%C3%A9%C3%AF%C3%AF%C3%AF%3Aw%C3%AE%C3%9CG%C3%81%60%C2%90%C3%B7%C2%85%C2%8C.9%1A%1A%1A%7Cg%C3%8F%C2%9Em-%2F%2F%C2%9F%C3%A0%C2%98_%C3%BF%07%C3%84%01A%C3%93I%13%C2%86a%12~%1ALa%18f%C3%87q%C3%BC%11%C2%8F%C2%B1%60%C3%85dr%C3%92%7C%C3%A2%C3%AF%C2%B2%1B%00%C3%B0%17%40%C3%B9E%3BF%2B%C2%B5%C2%BA%00%00%00%00IEND%C2%AEB%60%C2%82",
@@ -373,16 +372,16 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
                     "Sort: " + strings.helpTips.HousekeepingSort + "\n\n" +
                     "Reduce Project: " + strings.helpTips.HousekeepingReduce + "\n\n" +
                     "Collect Files...: " + strings.helpTips.HousekeepingCollect + "\n\n" +
-                    "Rename Comp to File Name: " + strings.helpTips.HKrctfn + "\n\n" +
-                    "Clear Render Queue: " + strings.helpTips.HKcrq + "\n\n" +
-                    "Purge All Memory & Disk Cache: " + strings.helpTips.HKpamdc
+                    "Rename Comp to File Name: " + strings.helpTips.HousekeepingRenameCompToFile + "\n\n" +
+                    "Clear Render Queue: " + strings.helpTips.HousekeepingClearRenderQueue + "\n\n" +
+                    "Purge All Memory & Disk Cache: " + strings.helpTips.HousekeepingPurgeAll
                 );
         var grpUPlusQuestionMark = grpDropdown.add("group", undefined, {name: "grpUPlusQuestionMark"});
             grpUPlusQuestionMark.orientation = "row";
             grpUPlusQuestionMark.alignChildren = ["center","center"];
             grpUPlusQuestionMark.spacing = 0;
             grpUPlusQuestionMark.margins = 0;
-        var u_array = ["Utilities", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Calc Distance (2 Layers)", "Calc Difference (2 Keyframes)", "Precompose Individually", "Round Position", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Select All Children", "Select All Unparented Layers", "Select All Non-Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Nulls", "Unlock All Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Layers", "Unlock All Layers", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Scale Composition", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Style: Edge Blur", "Style: Pixelation"];
+        var u_array = ["Utilities", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Calc Distance (2 Layers)", "Calc Difference (2 Keyframes)", "Precompose Individually", "Round Position", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Select All Children", "Select All Unparented Layers", "Select All Non-Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Nulls", "Unlock All Nulls", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Lock All Layers", "Unlock All Layers", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Scale Composition", "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀", "Style: Pixelation"];
         var uDropdown = grpUPlusQuestionMark.add("dropdownlist", undefined, undefined, {
                 name: "uDropdown",
                 items: u_array});
@@ -456,20 +455,19 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             uHelpStaticText.text = "?";
             uHelpStaticText.helpTip = ("Utilities Menu Options: \n" +
                     "_____________________________________________" + "\n\n" +
-                    "Calc Difference (2 Keyframes): " + strings.helpTips.Ucdkf + "\n\n" +
-                    "Calc Distance (2 layers): " + strings.helpTips.Ucd2l + "\n\n" +
-                    "Precompose Individually: " + strings.helpTips.Upi + "\n\n" +
-                    "Round Position: " + strings.helpTips.Urp + "\n\n" +
-                    "Select All Children: " + strings.helpTips.Usac + "\n\n" +
-                    "Select All Unparented Layers: " + strings.helpTips.Usaul + "\n\n" +
-                    "Select All Non-Nulls: " + strings.helpTips.Usann + "\n\n" +
-                    "Lock All Nulls: " + strings.helpTips.Ulan + "\n\n" +
-                    "Unlock All Nulls: " + strings.helpTips.Uun + "\n\n" +
-                    "Lock All Layers: " + strings.helpTips.Ulal + "\n\n" +
-                    "Unlock All Layers: " + strings.helpTips.Uual + "\n\n" +
-                    "Scale Composition: " + strings.helpTips.Uscc + "\n\n" +
-                    "Style: Edge Blur: " + strings.helpTips.Useb + "\n\n" +
-                    "Style: Pixelation: " + strings.helpTips.Usp);
+                    "Calc Difference (2 Keyframes): " + strings.helpTips.UtilitiesCalcDiff + "\n\n" +
+                    "Calc Distance (2 layers): " + strings.helpTips.UtilitiesDistBtwnTwo + "\n\n" +
+                    "Precompose Individually: " + strings.helpTips.UtilitiesPrecompIndividually + "\n\n" +
+                    "Round Position: " + strings.helpTips.UtilitiesRoundPosition + "\n\n" +
+                    "Select All Children: " + strings.helpTips.UtilitiesSelectChildren + "\n\n" +
+                    "Select All Unparented Layers: " + strings.helpTips.UtilitiesSelectUnparented + "\n\n" +
+                    "Select All Non-Nulls: " + strings.helpTips.UtilitiesSelectNonNulls + "\n\n" +
+                    "Lock All Nulls: " + strings.helpTips.UtilitiesLockNulls + "\n\n" +
+                    "Unlock All Nulls: " + strings.helpTips.UtilitiesUnlockNulls + "\n\n" +
+                    "Lock All Layers: " + strings.helpTips.UtilitiesLockAllLayers + "\n\n" +
+                    "Unlock All Layers: " + strings.helpTips.UtilitiesUnlockAllLayers + "\n\n" +
+                    "Scale Composition: " + strings.helpTips.UtilitiesScaleComp + "\n\n" +
+                    "Style: Pixelation: " + strings.helpTips.UtilitiesPixelation);
 //#endregion dropdowns
 
         /*
