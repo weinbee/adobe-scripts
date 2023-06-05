@@ -32,8 +32,8 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             bothButton: "Drag slider to desired amount, click me, I will set easing of IN+OUT values.",
             outButton: "Drag slider to desired amount, click me, I will set easing of OUT values only.",
             // housekeeping menu help ? button strings:
-            HKsrt: "Sorts project items (yes this function lives in five different places lol).",
-            HKrdc: "Reduces project to only files used by selected comp (the one you select in the project panel).",
+            HousekeepingSort: "Sorts project items (yes this function lives in five different places lol).",
+            HousekeepingReduce: "Reduces project to only files used by selected comp (the one you select in the project panel).",
             HKclct: "Collects all project files and prompts you to save them to a new project folder somewhere.",
             HKrctfn: "Renames active composition to file name, instead of leaving it 'Comp 1' or something silly.",
             HKcrq: "Clears render queue of all past/present/future renders. Handy when collecting files into fresh project.",
@@ -370,9 +370,9 @@ vers = "4.9.4.7"; // change version number here and it gets updated in the panel
             hkHelpStaticText.text = "?";
             hkHelpStaticText.helpTip = ("Housekeeping Menu Options: \n" +
                     "_____________________________________________" + "\n\n" +
-                    "Sort: " + strings.helpTips.HKsrt + "\n\n" +
-                    "Reduce Project: " + strings.helpTips.HKrdc + "\n\n" +
-                    "Collect Files...: " + strings.helpTips.HKclct + "\n\n" +
+                    "Sort: " + strings.helpTips.HousekeepingSort + "\n\n" +
+                    "Reduce Project: " + strings.helpTips.HousekeepingReduce + "\n\n" +
+                    "Collect Files...: " + strings.helpTips.HousekeepingCollect + "\n\n" +
                     "Rename Comp to File Name: " + strings.helpTips.HKrctfn + "\n\n" +
                     "Clear Render Queue: " + strings.helpTips.HKcrq + "\n\n" +
                     "Purge All Memory & Disk Cache: " + strings.helpTips.HKpamdc
