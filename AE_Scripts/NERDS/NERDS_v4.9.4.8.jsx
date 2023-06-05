@@ -5,7 +5,7 @@ No Copyright, Nic Hartmann™ 2023
 Use Without Caution
 */
 
-vers = "4.9.4.7"; // change version number here and it gets updated in the panel's name
+vers = "4.9.4.8"; // change version number here and it gets updated in the panel's name
 (function createDockablePanel(thisObj) {
     function buildUI(thisObj) {
         var windowNERDS = (thisObj instanceof Panel) ? thisObj : new Window('palette', 'NERDS_v' + vers + '', undefined, {
