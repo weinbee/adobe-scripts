@@ -169,12 +169,12 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
             col1flipGrp.spacing = 0;
             col1flipGrp.margins = 0;
 
-        var buttFlipX = col1flipGrp.add("button", undefined, "FLIP X");
+        var buttFlipX = col1flipGrp.add("button", undefined, "FLIP\nX");
             buttFlipX.onClick = function() {
             flipHorizontal();
             app.activeViewer.setActive();
             };
-        var buttFlipY = col1flipGrp.add("button", undefined, "FLIP Y");
+        var buttFlipY = col1flipGrp.add("button", undefined, "FLIP\nY");
             buttFlipY.onClick = function() {
             flipVertical();
             app.activeViewer.setActive();
