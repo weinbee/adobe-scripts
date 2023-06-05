@@ -489,11 +489,9 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
                     "Style: Pixelation: " + strings.helpTips.UtilitiesPixelation);
 //#endregion dropdowns
 
-        /*
-        000000000000000000000000000000
-        0000000000 Functions 000000000
-        000000000000000000000000000000
-        */
+//000000000000000000000000000000
+//0000000000 Functions 000000000
+//000000000000000000000000000000
 
 //#region 'Apply Easing'
         //=======================
@@ -1446,6 +1444,7 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
             nullLayer.remove();
         }
         app.endUndoGroup();
+        app.activeViewer.setActive();
     }
 //#endregion flip horizontal
 
@@ -1468,6 +1467,7 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
             nullLayer.remove();
         }
         app.endUndoGroup();
+        app.activeViewer.setActive();
     }
 //#endregion flip vertical
 
