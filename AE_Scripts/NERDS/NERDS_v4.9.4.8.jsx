@@ -170,13 +170,13 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
             col1flipGrp.margins = 0;
 
         var buttFlipX = col1flipGrp.add("button", undefined, "FLIP X");
-            buttFlipX.size = [50,30];
+            buttFlipX.size = [42,30];
             buttFlipX.onClick = function() {
             flipHorizontal();
             app.activeViewer.setActive();
             };
         var buttFlipY = col1flipGrp.add("button", undefined, "FLIP Y");
-            buttFlipY.size = [50,30];
+            buttFlipY.size = [42,30];
             buttFlipY.onClick = function() {
             flipVertical();
             app.activeViewer.setActive();
@@ -291,7 +291,7 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
         // Slider for Easing
         var slider = sliderGroup.add("slider", [10, 10, 142, 30], 0, 0, 100);
             slider.helpTip = strings.helpTips.slider;
-            slider.value = 50;
+            slider.value = 75;
             slider.stepdelta = 1;
 
         // EaseButts Group
