@@ -1429,48 +1429,14 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
 
 //#region flip horizontal
     function flipHorizontal() {
-        app.beginUndoGroup("Flip Horizontal");
-        var mainComp = app.project.activeItem;
-        var theLayers = app.project.activeItem.selectedLayers;
-        for (var num = 0; num < theLayers.length; num += 1) {
-            var theLayer = theLayers[num];
-            var oldParent = theLayer.parent;
-
-            var nullLayer = mainComp.layers.addNull();
-            nullLayer.position.setValue(theLayer.transform.anchorPoint.value);
-            theLayer.parent = nullLayer;
-            nullLayer.scale.setValue([-100, 100]);
-
-            // Unparent the layer and remove the null
-            theLayer.parent = oldParent;
-            nullLayer.remove();
+        app.executeCommand(app.findMenuCommandId("Flip Horizontal"));
         }
-        app.endUndoGroup();
-        app.activeViewer.setActive();
-    }
 //#endregion flip horizontal
 
 //#region flip vertical
     function flipVertical() {
-        app.beginUndoGroup("Flip Vertical");
-        var mainComp = app.project.activeItem;
-        var theLayers = app.project.activeItem.selectedLayers;
-        for (var num = 0; num < theLayers.length; num += 1) {
-            var theLayer = theLayers[num];
-            var oldParent = theLayer.parent;
-
-            var nullLayer = mainComp.layers.addNull();
-            nullLayer.position.setValue(theLayer.transform.anchorPoint.value);
-            theLayer.parent = nullLayer;
-            nullLayer.scale.setValue([100, -100]);
-
-            // Unparent the layer and remove the null
-            theLayer.parent = oldParent;
-            nullLayer.remove();
+        app.executeCommand(app.findMenuCommandId("Flip Vertical"));
         }
-        app.endUndoGroup();
-        app.activeViewer.setActive();
-    }
 //#endregion flip vertical
 
 //#region 'Misc for dropdowns'
