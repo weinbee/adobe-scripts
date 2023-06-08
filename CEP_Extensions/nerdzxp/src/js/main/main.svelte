@@ -13,7 +13,7 @@
 
   import nodeJs from "../assets/node-js.svg";
   import adobe from "../assets/adobe.svg";
-  import bolt from "../assets/bolt-cep.svg";
+  // import bolt from "../assets/bolt-cep.svg";
 
   import "../index.scss";
   import "./main.scss";
@@ -68,19 +68,19 @@
 
 <div class="app" style="background-color: {backgroundColor};">
   <header class="app-header">
-    <img src={bolt} class="icon" alt="" />
+    <!-- <img src={bolt} class="icon" alt="" /> -->
     <div class="button-group">
       <button on:click={() => (count += 1)}>Count is: {count}</button>
-      <button on:click={nodeTest}>
+      <!-- <button on:click={nodeTest}>
         <img class="icon-button" src={nodeJs} alt="" />
-      </button>
-      <button on:click={jsxTest}>
+      </button> -->
+      <!-- <button on:click={jsxTest}>
         <img class="icon-button" src={adobe} alt="" />
-      </button>
+      </button> -->
       <button on:click={jsxTestTS}>Ts</button>
     </div>
 
-    <p>Edit <code>main.svelte</code> and save to test HMR updates.</p>
+    <!-- <p>Edit <code>main.svelte</code> and save to test HMR updates.</p> -->
     <div>
       <button
         class="learn-more"
@@ -130,8 +130,8 @@
     text-transform: uppercase;
     padding: 1em 1.2em;
     background: var(--light-pink);
-    border: 2px solid var(--pink-border);
-    border-radius: 0.75em;
+    /* border: 2px solid var(--pink-border);
+    border-radius: 0.75em; */
     transform-style: preserve-3d;
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
       background 150ms cubic-bezier(0, 0, 0.58, 1);

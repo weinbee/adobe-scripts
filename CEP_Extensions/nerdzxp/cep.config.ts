@@ -53,14 +53,6 @@ const config: CEP_Config = {
       width: 600,
       height: 650,
     },
-    {
-      mainPath: "./settings/index.html",
-      name: "settings",
-      panelDisplayName: "Nerdzxp",
-      autoVisible: true,
-      width: 600,
-      height: 650,
-    },
 
   ],
   build: {
