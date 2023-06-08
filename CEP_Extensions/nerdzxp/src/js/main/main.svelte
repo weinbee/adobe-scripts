@@ -9,7 +9,10 @@
     subscribeBackgroundColor,
     evalTS,
   } from "../lib/utils/bolt";
+
   import { explodeShapeLayers } from "../../jsx/aeft/aeft";
+  import { flipHorizontal } from "../../jsx/aeft/aeft";
+  import { flipVertical } from "../../jsx/aeft/aeft";
 
   // import nodeJs from "../assets/node-js.svg";
 
@@ -62,6 +65,14 @@
   const explodeShapeLayers = () => {
     explodeShapeLayers();
   };
+
+  const flipHorizontal = () => {
+    flipHorizontal();
+  };
+
+  const flipVertical = () => {
+    flipVertical();
+  };
 </script>
 
 <div class="app" style="background-color: {backgroundColor};">
@@ -75,6 +86,18 @@
         on:click={async () => {
           const result = await evalTS("explodeShapeLayers");
         }}>Explode 💣</button
+      >
+      <button
+        class="learn-more"
+        on:click={async () => {
+          const result = await evalTS("explodeShapeLayers");
+        }}>Flip X</button
+      >
+      <button
+        class="learn-more"
+        on:click={async () => {
+          const result = await evalTS("explodeShapeLayers");
+        }}>Flip Y</button
       >
     </div>
   </header>

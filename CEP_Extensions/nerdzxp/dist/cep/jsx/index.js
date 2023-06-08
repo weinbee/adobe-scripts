@@ -160,6 +160,18 @@ function explodeShapeLayers() {
 }
 //#endregion explodeShapeLayers
 
+//#region flip horizontal
+function flipHorizontal() {
+  app.executeCommand(app.findMenuCommandId("Flip Horizontal"));
+}
+//#endregion flip horizontal
+
+//#region flip vertical
+function flipVertical() {
+  app.executeCommand(app.findMenuCommandId("Flip Vertical"));
+}
+//#endregion flip vertical
+
 var aeft = /*#__PURE__*/__objectFreeze({
   __proto__: null,
   helloError: helloError,
@@ -168,7 +180,9 @@ var aeft = /*#__PURE__*/__objectFreeze({
   helloArrayStr: helloArrayStr,
   helloObj: helloObj,
   helloWorld: helloWorld$4,
-  explodeShapeLayers: explodeShapeLayers
+  explodeShapeLayers: explodeShapeLayers,
+  flipHorizontal: flipHorizontal,
+  flipVertical: flipVertical
 });
 
 var helloWorld$3 = function helloWorld() {

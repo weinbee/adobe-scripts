@@ -14,8 +14,8 @@ export const helloWorld = () => {
 
 //#region explodeShapeLayers
 export function explodeShapeLayers() {
-  let comp: CompItem; 
-  let layer; 
+  let comp: CompItem;
+  let layer;
 
   app.beginUndoGroup("Explode Shape Layers");
 
@@ -45,17 +45,17 @@ export function explodeShapeLayers() {
       layer.duplicate();
       var duplicate = comp.layer(layer.index - 1);
       duplicate.name = duplicate.property("ADBE Root Vectors Group").property(i).name;
-      x = 0; 
-      y = 0; 
+      x = 0;
+      y = 0;
       d = 0;
-      
+
       for (var h = 1; h < i; h++) {
         duplicate.property("ADBE Root Vectors Group").property(h - x).remove();
-        x++; 
+        x++;
         d++;
       }
 
-      for (var k = 2; k <= (shapeContents.numProperties - d ); k++) {
+      for (var k = 2; k <= (shapeContents.numProperties - d); k++) {
         duplicate.property("ADBE Root Vectors Group").property(k - y).remove();
         y++;
       }
@@ -64,20 +64,20 @@ export function explodeShapeLayers() {
     for (var i = 0; i < layer.selectedProperties.length; i++) {
       layer.duplicate();
       var duplicate = comp.layer(layer.index - 1);
-      duplicate.name = layer.selectedProperties[i].name; 
-      x = 0; 
-      y = 0; 
+      duplicate.name = layer.selectedProperties[i].name;
+      x = 0;
+      y = 0;
       d = 0;
-      
+
       for (var h = 1; h < i; h++) {
         if (duplicate.property("ADBE Root Vectors Group").property(h - x).name != layer.selectedProperties[i].name) {
           duplicate.property("ADBE Root Vectors Group").property(h - x).remove();
-          x++; 
+          x++;
           d++;
         }
       }
 
-      for (var k = 1; k <= (shapeContents.numProperties - d ); k++) {
+      for (var k = 1; k <= (shapeContents.numProperties - d); k++) {
         if (duplicate.property("ADBE Root Vectors Group").property(k - y).name != layer.selectedProperties[i].name) {
           duplicate.property("ADBE Root Vectors Group").property(k - y).remove();
           y++;
@@ -93,3 +93,15 @@ export function explodeShapeLayers() {
   app.endUndoGroup();
 }
 //#endregion explodeShapeLayers
+
+//#region flip horizontal
+export function flipHorizontal() {
+  app.executeCommand(app.findMenuCommandId("Flip Horizontal"));
+}
+//#endregion flip horizontal
+
+//#region flip vertical
+export function flipVertical() {
+  app.executeCommand(app.findMenuCommandId("Flip Vertical"));
+}
+//#endregion flip vertical
