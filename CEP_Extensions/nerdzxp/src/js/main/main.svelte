@@ -59,7 +59,7 @@
   //   }
   // });
 
-  const explode = () => {
+  const explodeShapeLayers = () => {
     explodeShapeLayers();
   };
 </script>
