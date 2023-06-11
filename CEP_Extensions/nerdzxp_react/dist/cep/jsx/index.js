@@ -95,6 +95,86 @@ var helloWorld$4 = function helloWorld() {
   app.project.activeItem;
 };
 
+//#region explodeShapeLayers
+function explodeShapeLayers() {
+  var comp;
+  var layer;
+  app.beginUndoGroup("Explode Shape Layers");
+  if (!(app.project.activeItem instanceof CompItem)) {
+    return;
+  }
+  comp = app.project.activeItem;
+  if (comp.selectedLayers.length <= 0) {
+    return;
+  }
+  layer = comp.selectedLayers[0];
+  var shapeContents = layer.property("ADBE Root Vectors Group");
+  if (!(shapeContents instanceof PropertyGroup)) {
+    return;
+  }
+  var x;
+  var y;
+  var d;
+  if (layer.selectedProperties.length == 0) {
+    for (var i = 1; i <= shapeContents.numProperties; i++) {
+      layer.duplicate();
+      var duplicate = comp.layer(layer.index - 1);
+      duplicate.name = duplicate.property("ADBE Root Vectors Group").property(i).name;
+      x = 0;
+      y = 0;
+      d = 0;
+      for (var h = 1; h < i; h++) {
+        duplicate.property("ADBE Root Vectors Group").property(h - x).remove();
+        x++;
+        d++;
+      }
+      for (var k = 2; k <= shapeContents.numProperties - d; k++) {
+        duplicate.property("ADBE Root Vectors Group").property(k - y).remove();
+        y++;
+      }
+    }
+  } else if (layer.selectedProperties.length > 0) {
+    for (var i = 0; i < layer.selectedProperties.length; i++) {
+      layer.duplicate();
+      var duplicate = comp.layer(layer.index - 1);
+      duplicate.name = layer.selectedProperties[i].name;
+      x = 0;
+      y = 0;
+      d = 0;
+      for (var h = 1; h < i; h++) {
+        if (duplicate.property("ADBE Root Vectors Group").property(h - x).name != layer.selectedProperties[i].name) {
+          duplicate.property("ADBE Root Vectors Group").property(h - x).remove();
+          x++;
+          d++;
+        }
+      }
+      for (var k = 1; k <= shapeContents.numProperties - d; k++) {
+        if (duplicate.property("ADBE Root Vectors Group").property(k - y).name != layer.selectedProperties[i].name) {
+          duplicate.property("ADBE Root Vectors Group").property(k - y).remove();
+          y++;
+        }
+      }
+    }
+  }
+  if (comp && layer && layer.enabled) {
+    layer.enabled = false;
+  }
+  app.endUndoGroup();
+}
+//#endregion explodeShapeLayers
+
+//#region flip horizontal
+function flipHorizontal() {
+  app.executeCommand(app.findMenuCommandId("Flip Horizontal"));
+}
+//#endregion flip horizontal
+
+//#region flip vertical
+function flipVertical() {
+  app.executeCommand(app.findMenuCommandId("Flip Vertical"));
+}
+//#endregion flip vertical
+
 var aeft = /*#__PURE__*/__objectFreeze({
   __proto__: null,
   helloError: helloError,
@@ -102,8 +182,10 @@ var aeft = /*#__PURE__*/__objectFreeze({
   helloNum: helloNum,
   helloArrayStr: helloArrayStr,
   helloObj: helloObj,
-  helloVoid: helloVoid,
-  helloWorld: helloWorld$4
+  helloWorld: helloWorld$4,
+  explodeShapeLayers: explodeShapeLayers,
+  flipHorizontal: flipHorizontal,
+  flipVertical: flipVertical
 });
 
 var helloWorld$3 = function helloWorld() {
