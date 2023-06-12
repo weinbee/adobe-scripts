@@ -14,8 +14,6 @@ import viteLogo from "../assets/vite.svg";
 import tsLogo from "../assets/typescript.svg";
 import sassLogo from "../assets/sass.svg";
 
-import bolt from "../assets/bolt-cep.svg";
-
 import "./main.scss";
 
 const Main = () => {
@@ -75,37 +73,17 @@ const Main = () => {
             Count is: {count}
           </button>
         </div>
-        <p>
-          Edit <code>main.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
+        <div className="sherbetButtons">
           <button
-            className="app-link"
-            onClick={() => openLinkInBrowser("https://reactjs.org")}
-          >
-            React Docs
-          </button>
-          {" | "}
+            className="learn-more"
+            onClick={explode}>Explode 💣</button>
           <button
-            className="app-link"
-            onClick={() =>
-              openLinkInBrowser("https://vitejs.dev/guide/features.html")
-            }
-          >
-            Vite Docs
-          </button>
-          <div className="sherbetButtons">
-            <button
-              className="learn-more"
-              onClick={explode}>Explode 💣</button>
-            <button
-              className="learn-more"
-              onClick={flipHorizontal}>Flip X</button>
-            <button
-              className="learn-more"
-              onClick={flipVertical}>Flip Y</button>
-          </div>
-        </p>
+            className="learn-more"
+            onClick={flipHorizontal}>Flip X</button>
+          <button
+            className="learn-more"
+            onClick={flipVertical}>Flip Y</button>
+        </div>
       </header>
     </div>
   );
