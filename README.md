@@ -4,7 +4,7 @@ AE, AI, etc. scripts
 Rob, Eric, or Matt (whoever is kind and patient enough to read through my dumb baby code lol)
 Here's the instructs:
 
--clone this repo
+-clone this repo ```https://github.com/sakhaltai/adobe-scripts```
 
 -cd into ```nerdzxp_react```
 
