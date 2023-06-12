@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Slider from '@mui/material/Slider';
+import '@mui/material/styles';
 import { os, path } from "../lib/cep/node";
 import {
   csi,
@@ -44,6 +46,10 @@ const Main = () => {
     }
   }, []);
 
+  const valuetext = (value: number) => {
+    return `${value}`;
+  }
+
   return (
     <div className="app" style={{ backgroundColor: bgColor }}>
       <header className="app-header">
@@ -84,6 +90,18 @@ const Main = () => {
             className="learn-more"
             onClick={flipVertical}>Flip Y</button>
         </div>
+        <div className="slider-container"> 
+          <Slider
+            aria-label="Temperature"
+            defaultValue={50}
+            getAriaValueText={valuetext}
+            valueLabelDisplay="auto"
+            step={10}
+            marks={true}
+            min={0}
+            max={100}
+          />
+          </div>
       </header>
     </div>
   );
