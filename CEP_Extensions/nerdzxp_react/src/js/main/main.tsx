@@ -21,6 +21,8 @@ import "./main.scss";
 const Main = () => {
   const [bgColor, setBgColor] = useState("#282c34");
   const [count, setCount] = useState(0);
+  const [sliderValue, setSliderValue] = useState(50); // new state for slider value
+  const [easeType, setEaseType] = useState(''); // new state for ease type
 
   const explode = () => {
     evalTS("explodeShapeLayers").then((res) => {
@@ -36,6 +38,24 @@ const Main = () => {
 
   const flipVertical = () => {
     evalTS("flipVertical").then((res) => {
+      console.log(res);
+    });
+  };
+
+  const handleSliderChange = (event: Event, newValue: number | number[]) => {
+    if (Array.isArray(newValue)) {
+      setSliderValue(newValue[0]); // set the first value if newValue is an array
+    } else {
+      setSliderValue(newValue); // set the value if newValue is a number
+    }
+  };
+
+  const applyEasing = () => {
+    if (!easeType) {
+      alert('Please select an easing type.');
+      return;
+    }
+    evalTS("applyEasing", sliderValue, easeType).then((res) => {
       console.log(res);
     });
   };
@@ -90,8 +110,10 @@ const Main = () => {
             className="learn-more"
             onClick={flipVertical}>Flip Y</button>
         </div>
-        <div className="slider-container"> 
+        <div className="slider-container">
           <Slider
+            value={sliderValue}
+            onChange={handleSliderChange}
             aria-label="Temperature"
             defaultValue={50}
             getAriaValueText={valuetext}
@@ -101,7 +123,10 @@ const Main = () => {
             min={0}
             max={100}
           />
-          </div>
+        <button onClick={() => {setEaseType('in'); applyEasing();}}>In</button>
+        <button onClick={() => {setEaseType('out'); applyEasing();}}>Out</button>
+        <button onClick={() => {setEaseType('both'); applyEasing();}}>Both</button>
+        </div>
       </header>
     </div>
   );

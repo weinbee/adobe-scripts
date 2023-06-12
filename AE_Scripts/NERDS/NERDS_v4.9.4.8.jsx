@@ -182,14 +182,6 @@ vers = "4.9.4.8"; // change version number here and it gets updated in the panel
             app.activeViewer.setActive();
             };
 
-    /*  var iconButtSort_imgString = strings.imgStrings.sort;
-        var iconButtSort = col1Butts.add("iconbutton", undefined, File.decode(iconButtSort_imgString), {name: "iconButtSort", style: "toolbutton"});
-            iconButtSort.helpTip = strings.helpTips.sort;
-            iconButtSort.onClick = function() {
-            sortProjectItems();
-            app.activeViewer.setActive();
-        }; */
-
         var iconButtReverse_imgString = strings.imgStrings.reverse;
         var iconButtReverse = col1Butts.add("iconbutton", undefined, File.decode(iconButtReverse_imgString), {name: "iconButtReverse", style: "toolbutton"});
             iconButtReverse.helpTip = strings.helpTips.reverse;
